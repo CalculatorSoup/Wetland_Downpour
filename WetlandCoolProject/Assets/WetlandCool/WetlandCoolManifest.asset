@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AssemblyDefinitions
   m_EditorClassIdentifier: 
   StagingPaths:
-  - <MSUBuildPath>
+  - <MSUBuildPathPlugins>
   definitions:
   - {fileID: 5897886265953266890, guid: 44bb4650d0e87514f8c788a9e1155235, type: 3}
 --- !u!114 &-2624514360056421071
@@ -29,8 +29,8 @@ MonoBehaviour:
   m_Name: ThunderstoreData
   m_EditorClassIdentifier: 
   StagingPaths:
-  - <ManifestPluginStaging>
-  url: 
+  - <MSUBuildPath>
+  url: https://github.com/CalculatorSoup/Wetland_Downpour
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   Name: Wetland_Downpour
   Description: Adds a loop-exclusive variant for Wetland Aspect with new visuals,
     different monsters, and more random variations. Configurable!
-  Version: 0.1.0
+  Version: 0.1.3
   Dependencies:
   - {fileID: 11400000, guid: d7d8ed5ac59df8acbbc4983f1ebba079, type: 2}
   - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: AssetBundleDefinitions
   m_EditorClassIdentifier: 
   StagingPaths:
-  - <MSUBuildPath>
+  - <MSUBuildPathPlugins>
   assetBundles:
   - assetBundleName: WetlandCoolAssets
     assets:
