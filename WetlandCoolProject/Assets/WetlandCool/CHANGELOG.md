@@ -9,3 +9,7 @@
 # 0.1.2
 
 * Maybe actually fully fixed the readme this time haha
+
+# 0.1.3
+
+* Fix for language files not loading
