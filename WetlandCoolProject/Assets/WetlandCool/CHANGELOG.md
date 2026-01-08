@@ -12,4 +12,9 @@
 
 # 0.1.3
 
-* Fix for language files not loading
+* Attempted fix for language files not loading
+* Attempted fix for README images not embedding
+
+# 0.1.4
+
+* Revised the stage's subtitle

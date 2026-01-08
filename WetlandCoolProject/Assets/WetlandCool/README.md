@@ -6,7 +6,7 @@ Wetland Downpour is a loop-exclusive stage variant for Wetland Aspect with a lus
 
 
 
-![](https://i.postimg.cc/xjb5WY1g/image.png)
+![](https://github.com/CalculatorSoup/Wetland_Downpour/blob/main/WetlandCoolProject/Assets/preview%20campfire.png?raw=true)
 
 
 
@@ -56,5 +56,5 @@ If you encounter any issue with the map, please let me know on GitHub or on Disc
 
 
 
-![](https://i.postimg.cc/fLzCG0kL/image.png)
+![](https://raw.githubusercontent.com/CalculatorSoup/Wetland_Downpour/refs/heads/main/WetlandCoolProject/Assets/preview%20ruins.png)
 
