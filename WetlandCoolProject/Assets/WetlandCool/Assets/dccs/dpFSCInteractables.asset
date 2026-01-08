@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 495100722, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
+  m_Name: dpFSCInteractables
+  m_EditorClassIdentifier: 
+  targetPool: {fileID: 11400000, guid: 7c450fa9384b87c41bfe44607c78bff3, type: 2}
+  poolCategories:
+  - name: 
+    categoryWeight: 1
+    alwaysIncluded:
+    - dccs: {fileID: 11400000, guid: 3025710121025a24686ffeb21d51574e, type: 2}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+      weight: 0
+    includedIfConditionsMet:
+    - dccs: {fileID: 11400000, guid: 5b9d716bd920abd4aa79feaf4f12df0d, type: 2}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: d4f30c23b971a9b428e2796dc04ae099
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    - dccs: {fileID: 11400000, guid: 2c49ff6174984224f9fb229727057de9, type: 2}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: 851f234056d389b42822523d1be6a167
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    - dccs: {fileID: 11400000, guid: 18f05c8035222844497593d24793e41f, type: 2}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: 234e83997deed274291470be69e7662e
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    includedIfNoConditionsMet: []

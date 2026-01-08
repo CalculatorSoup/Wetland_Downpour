@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 495100722, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
+  m_Name: dpFSCMonsters
+  m_EditorClassIdentifier: 
+  targetPool: {fileID: 11400000, guid: d3ee3c6fb27c8494a8e6f4a91d2cab83, type: 2}
+  poolCategories:
+  - name: Standard
+    categoryWeight: 0.98
+    alwaysIncluded:
+    - dccs: {fileID: 11400000, guid: 003f50aa54e6ed741a8f8ff15b9e79e7, type: 2}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+      weight: 0
+    includedIfConditionsMet:
+    - dccs: {fileID: 11400000, guid: 23d3c30c9e40aac41bcc7e0aa0c9738c, type: 2}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: d4f30c23b971a9b428e2796dc04ae099
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    - dccs: {fileID: 11400000, guid: f16a995e9734e064d921f7efb9d4edd7, type: 2}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: 851f234056d389b42822523d1be6a167
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    - dccs: {fileID: 11400000, guid: 6c4a6a1cf23d5fd49bd5959a1012f023, type: 2}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: 234e83997deed274291470be69e7662e
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    includedIfNoConditionsMet: []
+  - name: Family
+    categoryWeight: 0.02
+    alwaysIncluded: []
+    includedIfConditionsMet:
+    - dccs: {fileID: 0}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: a5738804af60cad499ad1483fcabb929
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions: []
+    - dccs: {fileID: 0}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 3736181fdcb9e3b40a1472b8efe4a1c2
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions: []
+    - dccs: {fileID: 0}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: f3a69355569999b4ebd363e0481e7825
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: d4f30c23b971a9b428e2796dc04ae099
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    - dccs: {fileID: 0}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 74cc25007c7994343afdbfd1e9ab67a0
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: 234e83997deed274291470be69e7662e
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    - dccs: {fileID: 0}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 03c544fe32d3f1343bd25e1edea79acd
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions: []
+    - dccs: {fileID: 0}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: f3bfb4a77bbec33489b14d71aed64a13
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: d4f30c23b971a9b428e2796dc04ae099
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    includedIfNoConditionsMet: []
+  - name: VoidInvasion
+    categoryWeight: 0.02
+    alwaysIncluded: []
+    includedIfConditionsMet:
+    - dccs: {fileID: 0}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: 6cec6cade01c50048808fff67e245149
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions:
+      - _asset: {fileID: 0}
+        _address: d4f30c23b971a9b428e2796dc04ae099
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    includedIfNoConditionsMet: []

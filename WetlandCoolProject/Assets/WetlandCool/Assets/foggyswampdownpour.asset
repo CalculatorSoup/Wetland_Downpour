@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -794597441, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: foggyswampdownpour
+  m_EditorClassIdentifier: 
+  sceneAddress:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+  baseSceneNameOverride: foggyswampdownpour
+  sceneType: 1
+  isOfflineScene: 0
+  stageOrder: 2
+  requiredExpansion: {fileID: 0}
+  nameToken: FSCOOL_MAP_FSCSCENE_NAME_TOKEN
+  subtitleToken: FSCOOL_MAP_FSCSCENE_SUBTITLE_TOKEN
+  previewTexture: {fileID: 2800000, guid: 749f552926428a249a8442a09606fe6b, type: 3}
+  previewTextureReference:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+  portalMaterial: {fileID: 0}
+  portalMaterialReference:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+  portalSelectionMessageString: FSCOOL_BAZAAR_SEER_FSCSCENE
+  filterOutOfBazaar: 0
+  shouldIncludeInLogbook: 1
+  loreToken: FSCOOL_MAP_FSCSCENE_LORE_TOKEN
+  dioramaPrefab: {fileID: 8548330779601887739, guid: b01131f7fc1d3d442b70ec0b74119cc6, type: 3}
+  dioramaPrefabAddress:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+  mainTrack: {fileID: 0}
+  bossTrack: {fileID: 0}
+  environmentColor: {r: 0, g: 0, b: 0, a: 0}
+  hasSafeStart: 0
+  suppressPlayerEntry: 0
+  suppressNpcEntry: 0
+  blockOrbitalSkills: 0
+  validForRandomSelection: 1
+  allowItemsToSpawnObjects: 0
+  preventStageAdvanceCounter: 0
+  needSkipDevotionRespawn: 0
+  destinationsGroup: {fileID: 0}
+  loopedDestinationsGroup: {fileID: 0}
+  shouldUpdateSceneCollectionAfterLooping: 1
+  isLockedBeforeLooping: 0
+  loopedSceneDef: {fileID: 0}
+  destinations: []
+  preferredPortalPrefab: {fileID: 0}
+  portalPrefabAddress:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 

@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2099981080, guid: 45feadaaa90b2d2217207fb8b533753e, type: 3}
+  m_Name: dccsFSCInteractablesDLC1
+  m_EditorClassIdentifier: 
+  targetCardCategorySelection: {fileID: 11400000, guid: 3c5cb085a67b9e04eb0e59bf26a5ce69, type: 2}
+  categories:
+  - name: Chests
+    cards:
+    - spawnCard:
+        _asset: {fileID: 0}
+        _address: 219a669d4c49ff142b3b854e8dc32083
+        _useDirectReference: 0
+      selectionWeight: 3
+      spawnDistance: 0
+      preventOverhead: 0
+      minimumStageCompletions: 0
+      requiredUnlockableDef:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+      forbiddenUnlockableDef:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    selectionWeight: 45
+  - name: Void Stuff
+    cards:
+    - spawnCard:
+        _asset: {fileID: 0}
+        _address: 1ac364f22c6dbf846afee12052e0f878
+        _useDirectReference: 0
+      selectionWeight: 14
+      spawnDistance: 0
+      preventOverhead: 0
+      minimumStageCompletions: 0
+      requiredUnlockableDef:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+      forbiddenUnlockableDef:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    - spawnCard:
+        _asset: {fileID: 0}
+        _address: dd4812090f7808b4b95d387977f4efe3
+        _useDirectReference: 0
+      selectionWeight: 7
+      spawnDistance: 0
+      preventOverhead: 0
+      minimumStageCompletions: 1
+      requiredUnlockableDef:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+      forbiddenUnlockableDef:
+        _asset: {fileID: 0}
+        _address: 
+        _useDirectReference: 0
+        _canLoadFromCatalog: 0
+    selectionWeight: 3

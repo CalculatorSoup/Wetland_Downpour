@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7954983917119070764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e13dda513544419a89926bd12ad8a, type: 3}
+  m_Name: AssemblyDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <MSUBuildPath>
+  definitions:
+  - {fileID: 5897886265953266890, guid: 44bb4650d0e87514f8c788a9e1155235, type: 3}
+--- !u!114 &-2624514360056421071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a82fec78ebc734d9ad1346cd40b5f9, type: 3}
+  m_Name: ThunderstoreData
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestPluginStaging>
+  url: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e563561e08b6a3642a487177f5cfbb37, type: 3}
+  m_Name: WetlandCoolManifest
+  m_EditorClassIdentifier: 
+  Data:
+  - {fileID: 2493102646770600095}
+  - {fileID: -7954983917119070764}
+  - {fileID: 7292789147763839772}
+  - {fileID: 2033328667324254867}
+  - {fileID: 5014599077599716013}
+  - {fileID: -2624514360056421071}
+  identity: {fileID: 2493102646770600095}
+  QuickAccess: 1
+--- !u!114 &2033328667324254867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <MSUBuildPathStreamingLanguage>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 102900000, guid: 749b39220b8392a45b5221c8cadc11eb, type: 3}
+--- !u!114 &2493102646770600095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22bb7fd1d3b56a48bc52f8e407901d6, type: 3}
+  m_Name: ManifestIdentity
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <ManifestPluginStaging>
+  Author: wormsworms
+  Name: Wetland_Downpour
+  Description: Adds a loop-exclusive variant for Wetland Aspect with new visuals,
+    different monsters, and more random variations. Configurable!
+  Version: 0.1.0
+  Dependencies:
+  - {fileID: 11400000, guid: d7d8ed5ac59df8acbbc4983f1ebba079, type: 2}
+  - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}
+  - {fileID: 11400000, guid: 1f1d261aeee91427ddd08b6378ec4e5a, type: 2}
+  - {fileID: 11400000, guid: 184f0fdf3edcd6bad171410f4e0fd947, type: 2}
+  - {fileID: 11400000, guid: f0d760e9d4649854da675f3b2978b41b, type: 2}
+  - {fileID: 11400000, guid: 48f050b3512173aba0a952f846a557fa, type: 2}
+  - {fileID: 11400000, guid: bff73382628f698c89c1d9ae43c8f350, type: 2}
+--- !u!114 &5014599077599716013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b243ff405b33b94dbf5b6775dd9aa33, type: 3}
+  m_Name: Files
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <MSUBuildPath>
+  includeMetaFiles: 0
+  files:
+  - {fileID: 4900000, guid: a9fca3d250e4850428a6e441a9321c80, type: 3}
+  - {fileID: 4900000, guid: cb20ac17782414c4e8886896a91c5407, type: 3}
+  - {fileID: 2800000, guid: c1e1623d7bfd07949b8c62ea331b1ece, type: 3}
+--- !u!114 &7292789147763839772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1008b78cb6e846889b7778282fbef, type: 3}
+  m_Name: AssetBundleDefinitions
+  m_EditorClassIdentifier: 
+  StagingPaths:
+  - <MSUBuildPath>
+  assetBundles:
+  - assetBundleName: WetlandCoolAssets
+    assets:
+    - {fileID: 102900000, guid: 6fccfddd5a17f8f4aa301a7372828d99, type: 3}
+  - assetBundleName: WetlandCoolScene
+    assets:
+    - {fileID: 102900000, guid: 80d47460b486bcb4886c90be52280a4c, type: 3}

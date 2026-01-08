@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1750963435, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: Roach
+  m_EditorClassIdentifier: 
+  reorientTimerMin: 0.2
+  reorientTimerMax: 0.5
+  turnSpeed: 720
+  acceleration: 120
+  maxSpeed: 12
+  backupDuration: 0.1
+  wiggle: 1440
+  stepSize: 0.1
+  minSimulationDuration: 3
+  maxSimulationDuration: 7
+  chanceToFinishOnBump: 0.5
+  keyframeInterval: 0.16
+  minReactionTime: 0
+  maxReactionTime: 0.6
+  roachPrefab: {fileID: 919132149155446097, guid: cbc0806bd8e2f684cb85eba5df898b1e, type: 3}
