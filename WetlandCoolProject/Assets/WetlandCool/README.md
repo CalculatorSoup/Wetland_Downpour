@@ -12,7 +12,8 @@ Wetland Downpour is a loop-exclusive stage variant for Wetland Aspect with a lus
 
 ## Features
 
-
+* New stage that replaces Wetland Aspect after looping (can optionally appear before looping and/or entirely replace Wetland Aspect)
+* Some monsters from [Starstorm 2](https://thunderstore.io/package/TeamMoonstorm/Starstorm2/) and [EnemiesReturns](https://thunderstore.io/package/Risky_Sleeps/EnemiesReturns/) can appear if their respective mod is enabled
 
 ### Gameplay Changes (compared to Wetland Aspect)
 

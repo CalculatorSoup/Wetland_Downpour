@@ -195,8 +195,38 @@
       "dependencies": {},
       "hash": "b3a4dbc99305a90e7455dbc69940f7eee0054886"
     },
+    "jacedadorito-locationsofprecipitation": {
+      "version": "file:LocationsOfPrecipitation",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "kingenderbrine-lobbyskinsfix": {
+      "version": "file:LobbySkinsFix",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "kingenderbrine-scrollablelobbyui": {
+      "version": "file:ScrollableLobbyUI",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "lordvgames-gildedchunkspamfix": {
+      "version": "file:GildedChunkSpamFix",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "mmhook-assemblies": {
       "version": "file:mmhook-assemblies",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "nebby-loadingscreenspritefix": {
+      "version": "file:LoadingScreenSpriteFix",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -215,6 +245,12 @@
     },
     "riskofthunder-bepinex_gui": {
       "version": "file:BepInEx_GUI",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "riskofthunder-burstsofrain": {
+      "version": "file:BurstsOfRain",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -457,6 +493,18 @@
       "dependencies": {},
       "hash": "b8704d045fd4c32e83778bf3e1792d6e0cf76e00"
     },
+    "risky_sleeps-enemiesreturns": {
+      "version": "file:EnemiesReturns",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "rune580-risk_of_options": {
+      "version": "file:Risk_Of_Options",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "score-miscfixes": {
       "version": "file:MiscFixes",
       "depth": 0,
@@ -465,6 +513,18 @@
     },
     "smooth_salad-shaderswapper": {
       "version": "file:ShaderSwapper",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "teammoonstorm-moonstormsharedutils": {
+      "version": "file:MoonstormSharedUtils",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "teammoonstorm-starstorm2": {
+      "version": "file:Starstorm2",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

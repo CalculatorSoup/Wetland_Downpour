@@ -87,6 +87,6 @@ WetlandCoolProject/Assets/ThunderKitSettings/ThunderKit Extensions.asset
 WetlandCoolProject/ThunderKit/
 
 #Ensures mod dependencies such as R2API and others are not explicitly added to the github repository to avoid unecesary redistribution
-SS2-Project/Packages/*
-!SS2-Project/Packages/packages-lock.json
-!SS2-Project/Packages/manifest.json
+WetlandCoolProject/Packages/*
+!WetlandCoolProject/Packages/packages-lock.json
+!WetlandCoolProject/Packages/manifest.json

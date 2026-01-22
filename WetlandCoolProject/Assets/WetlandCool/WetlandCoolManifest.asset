@@ -86,8 +86,9 @@ MonoBehaviour:
   Author: wormsworms
   Name: Wetland_Downpour
   Description: Adds a loop-exclusive variant for Wetland Aspect with new visuals,
-    different monsters, and more random variations. Configurable!
-  Version: 0.1.4
+    different monsters, and more random variations. Added monsters from Starstorm
+    2 and EnemiesReturns!
+  Version: 0.2.0
   Dependencies:
   - {fileID: 11400000, guid: d7d8ed5ac59df8acbbc4983f1ebba079, type: 2}
   - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}

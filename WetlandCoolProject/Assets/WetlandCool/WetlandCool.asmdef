@@ -78,7 +78,10 @@
         "R2API.Teams.dll",
         "R2API.LobbyConfig.dll",
         "ShaderSwapper.dll",
-        "MMHOOK_RoR2.dll"
+        "MMHOOK_RoR2.dll",
+        "Starstorm2.dll",
+        "EnemiesReturns.dll",
+        "MSU.Runtime.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
