@@ -1,3 +1,13 @@
+# 0.2.1
+- Made a couple changes to increase the map's brightness in an effort to (hopefully meaningfully) help with visibility in dark areas, particularly when the screen is dimmed by the damage vignette or other effects
+  - Adjusted fog colors ("fog start" color is brighter and more translucent)
+  - Slightly increased sun intensity (1 -> 1.4)
+- Halved the selection weight for larvae relative to other basic monsters
+- Changed spawn distance for Lynx Scouts (Far -> Standard)
+- Fixed the tents not having an assigned surface def
+- Fixed monsters not using the geyser to chase players onto the cliff
+- Fixed a map node that should've had a gate assigned, but did not
+
 # 0.2.0
 - Added monsters from Starstorm 2!
   - Followers, Wayfarers, and Archer Bugs can appear if the mod is enabled

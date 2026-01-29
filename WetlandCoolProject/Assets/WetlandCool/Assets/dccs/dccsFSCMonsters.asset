@@ -116,7 +116,7 @@ MonoBehaviour:
         _asset: {fileID: 0}
         _address: 4b3ec516db7849f4d91c17e61f50c3b0
         _useDirectReference: 0
-      selectionWeight: 1
+      selectionWeight: 2
       spawnDistance: 2
       preventOverhead: 0
       minimumStageCompletions: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
         _asset: {fileID: 0}
         _address: c0363b855d43fc04d8e82d1ef505d972
         _useDirectReference: 0
-      selectionWeight: 1
+      selectionWeight: 2
       spawnDistance: 0
       preventOverhead: 0
       minimumStageCompletions: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
         _asset: {fileID: 0}
         _address: 94ec3e9c9692ff84a99fd8bb1962cbb0
         _useDirectReference: 0
-      selectionWeight: 1
+      selectionWeight: 2
       spawnDistance: 0
       preventOverhead: 0
       minimumStageCompletions: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
         _asset: {fileID: 0}
         _address: 79a0217696fe62f40a8e88f039987a2c
         _useDirectReference: 0
-      selectionWeight: 1
+      selectionWeight: 2
       spawnDistance: 2
       preventOverhead: 0
       minimumStageCompletions: 0

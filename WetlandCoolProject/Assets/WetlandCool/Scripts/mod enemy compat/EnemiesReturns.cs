@@ -46,7 +46,7 @@ namespace FSCStage
                 var scoutCard = new RoR2.DirectorCard()
                 {
                     spawnCard = (RoR2.SpawnCard)(object)ScoutBody.SpawnCards.cscLynxScoutDefault,
-                    spawnDistance = RoR2.DirectorCore.MonsterSpawnDistance.Far,
+                    spawnDistance = RoR2.DirectorCore.MonsterSpawnDistance.Standard,
                     selectionWeight = LynxScout.SelectionWeight.Value,
                     minimumStageCompletions = LynxScout.MinimumStageCompletion.Value
                 };

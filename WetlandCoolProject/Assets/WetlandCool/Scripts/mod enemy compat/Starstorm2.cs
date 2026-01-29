@@ -58,7 +58,7 @@ namespace FSCStage
                 {
                     spawnCard = SS2Assets.LoadAsset<RoR2.SpawnCard>("scLamp", (SS2Bundle)17),
                     spawnDistance = RoR2.DirectorCore.MonsterSpawnDistance.Far,
-                    selectionWeight = 1
+                    selectionWeight = 2
                 };
 
                 var followerHolder = new DirectorAPI.DirectorCardHolder
@@ -82,7 +82,7 @@ namespace FSCStage
                     {
                         spawnCard = SS2Assets.LoadAsset<RoR2.SpawnCard>("cscAcidBug", (SS2Bundle)17),
                         spawnDistance = RoR2.DirectorCore.MonsterSpawnDistance.Standard,
-                        selectionWeight = 1,
+                        selectionWeight = 2,
                         minimumStageCompletions = 5
                     };
 
