@@ -51904,7 +51904,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &281748614
 Transform:
@@ -100078,7 +100078,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.7254902, b: 0.6431373, a: 0}
-  m_Intensity: 1.4
+  m_Intensity: 1.6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -100117,7 +100117,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -100161,8 +100161,8 @@ MonoBehaviour:
   NGSS_SAMPLING_TEST: 4
   NGSS_SAMPLING_FILTER: 8
   NGSS_SAMPLING_DISTANCE: 75
-  NGSS_SHADOWS_SOFTNESS: 1
-  NGSS_PCSS_ENABLED: 1
+  NGSS_SHADOWS_SOFTNESS: 3
+  NGSS_PCSS_ENABLED: 0
   NGSS_PCSS_SOFTNESS_NEAR: 0.125
   NGSS_PCSS_SOFTNESS_FAR: 1
   NGSS_NOISE_TO_DITHERING_SCALE: 0
@@ -100172,7 +100172,7 @@ MonoBehaviour:
   NGSS_DENOISER_BLUR: 0.25
   NGSS_DENOISER_EDGE_TOLERANCE: 0.5
   NGSS_RECEIVER_PLANE_BIAS: 0
-  NGSS_CASCADES_BLENDING: 1
+  NGSS_CASCADES_BLENDING: 0
   NGSS_CASCADES_BLENDING_VALUE: 1
   NGSS_CASCADES_SOFTNESS_NORMALIZATION: 1
 --- !u!1 &540146596
@@ -309824,7 +309824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forbiddenHulls: 6
   flags: 3
-  gateName: 
+  gateName: MoundDisabled
 --- !u!1 &1680153503
 GameObject:
   m_ObjectHideFlags: 0
@@ -327779,14 +327779,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786846359}
-  m_LocalRotation: {x: 0.00977124, y: 0.95426196, z: 0.001463106, w: 0.29880852}
-  m_LocalPosition: {x: 17.88, y: 71.51, z: -105.87}
+  m_LocalRotation: {x: -0.02121495, y: 0.9472386, z: -0.04596821, w: 0.31650582}
+  m_LocalPosition: {x: 17.88, y: 71.78, z: -105.87}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 233367025}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.175, y: 145.228, z: 1.119}
+  m_LocalEulerAnglesHint: {x: 4.224, y: 142.9, z: -3.984}
 --- !u!114 &1786846361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396625,7 +396625,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &796310082064643782
 MeshRenderer:
@@ -396701,7 +396701,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!33 &1072608371825379751
 MeshFilter:
@@ -396786,7 +396786,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1859047115030970354
 MonoBehaviour:
@@ -396984,7 +396984,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2795520923630476745
 Transform:
@@ -397275,7 +397275,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &5401531970109854470
 MeshCollider:
@@ -397454,7 +397454,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &6895018597733970186
 MonoBehaviour:
@@ -397638,7 +397638,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &7518799791038649671
 MonoBehaviour:
@@ -397917,7 +397917,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &8646530086015762629
 MeshCollider:

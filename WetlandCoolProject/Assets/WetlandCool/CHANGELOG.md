@@ -1,3 +1,13 @@
+# 0.2.3
+- Added Simplified Chinese translation (thanks to JunJun5406 on github for submitting this!)
+- Updated code for adding monsters from EnemiesReturns to not use deprecated config options
+
+# 0.2.2
+- Adjusted fog post-processing again to re-saturate the map's colors and bring them closer to the README preview screenshots. Also upped sun brightness again to compensate for this
+- Adjusted most materials. The differences are probably borderline indistinguishable without before-after shots, but generally they should look slightly better
+- Reduced the Lynx Totem texture's file size
+- Fixed a map node that was missing a gate, causing interactables to sometimes spawn inside a wall
+
 # 0.2.1
 - Made a couple changes to increase the map's brightness in an effort to (hopefully meaningfully) help with visibility in dark areas, particularly when the screen is dimmed by the damage vignette or other effects
   - Adjusted fog colors ("fog start" color is brighter and more translucent)

@@ -212,7 +212,7 @@ MeshCollider:
   m_GameObject: {fileID: 1493622161575749333}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -487,7 +487,7 @@ MeshCollider:
   m_GameObject: {fileID: 3774026706103239843}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -634,7 +634,7 @@ MeshCollider:
   m_GameObject: {fileID: 4645610713388303472}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1130,9 +1130,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6263299829830352002, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1909592292560116461, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
       propertyPath: m_Name
       value: FSCMangrove (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226443913534361172, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501127738343071563, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
@@ -1286,9 +1302,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6263299829830352002, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1909592292560116461, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
       propertyPath: m_Name
       value: FSCMangrove (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226443913534361172, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501127738343071563, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
@@ -1442,9 +1474,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6263299829830352002, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1909592292560116461, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
       propertyPath: m_Name
       value: FSCMangrove
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226443913534361172, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501127738343071563, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d11bab315c75e24e8dbb38275b9f937, type: 3}
@@ -1523,6 +1571,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc5eafec6b2e08841869f17179faaaba, type: 3}
       propertyPath: m_Name
       value: FSCLynxTotem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: cc5eafec6b2e08841869f17179faaaba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5eafec6b2e08841869f17179faaaba, type: 3}

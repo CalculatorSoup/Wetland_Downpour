@@ -7,7 +7,7 @@
       "dependencies": {}
     },
     "com.passivepicasso.thunderkit": {
-      "version": "https://github.com/PassivePicasso/ThunderKit.git",
+      "version": "https://github.com/PassivePicasso/ThunderKit.git#9.1.6",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -188,6 +188,12 @@
       },
       "url": "https://packages.unity.com"
     },
+    "goorakh-pizzaclientlagfix": {
+      "version": "file:PizzaClientLagFix",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "jace-locationsofprecipitation": {
       "version": "https://github.com/JaceDaDorito/jace-locationsofprecipitation.git",
       "depth": 0,
@@ -231,8 +237,32 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "plasmacore3-forgotten_relics": {
+      "version": "file:Forgotten_Relics",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "pseudopulse-rebindables": {
+      "version": "file:Rebindables",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "pseudopulse-relicsfix": {
+      "version": "file:RelicsFix",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "pseudopulse-seekerspatcher": {
       "version": "file:SeekersPatcher",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "pseudopulse-soundfixer": {
+      "version": "file:SoundFixer",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -478,7 +508,7 @@
       "dependencies": {}
     },
     "riskofthunder-ror2editorkit": {
-      "version": "https://github.com/risk-of-thunder/RoR2EditorKit.git#5.6.5",
+      "version": "https://github.com/risk-of-thunder/RoR2EditorKit.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -501,6 +531,12 @@
     },
     "rune580-risk_of_options": {
       "version": "file:Risk_Of_Options",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "sandsweptteam-sandswept": {
+      "version": "file:Sandswept",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

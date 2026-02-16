@@ -89,13 +89,13 @@ Material:
     - _BlueChannelBias: 2.29
     - _BlueChannelSmoothness: 0
     - _BlueChannelSpecularExponent: 20
-    - _BlueChannelSpecularStrength: 0.25
+    - _BlueChannelSpecularStrength: 0.12
     - _BumpScale: 1
     - _ColorsOn: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DecalLayer: 1
-    - _Depth: 0.75
+    - _Depth: 0.45
     - _DetailNormalMapScale: 1
     - _DoublesampleOn: 1
     - _DstBlend: 0
@@ -110,13 +110,13 @@ Material:
     - _Metallic: 0
     - _MixColorsOn: 0
     - _Mode: 0
-    - _NormalStrength: 0.8
+    - _NormalStrength: 0.6
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RampInfo: 1
     - _RedChannelBias: 2
     - _RedChannelSmoothness: 0
-    - _RedChannelSpecularExponent: 0.1
+    - _RedChannelSpecularExponent: 0.12
     - _RedChannelSpecularStrength: 0
     - _SmoothnessTextureChannel: 0
     - _SnowOn: 0

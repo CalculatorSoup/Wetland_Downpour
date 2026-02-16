@@ -69,6 +69,7 @@ MonoBehaviour:
   includeMetaFiles: 0
   files:
   - {fileID: 102900000, guid: 749b39220b8392a45b5221c8cadc11eb, type: 3}
+  - {fileID: 102900000, guid: bdbd8d689103db444ac003009b303435, type: 3}
 --- !u!114 &2493102646770600095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +88,7 @@ MonoBehaviour:
   Name: Wetland_Downpour
   Description: Adds a loop-exclusive variant for Wetland Aspect with new visuals,
     different monsters, and more random variations. Configurable!
-  Version: 0.2.1
+  Version: 0.2.3
   Dependencies:
   - {fileID: 11400000, guid: d7d8ed5ac59df8acbbc4983f1ebba079, type: 2}
   - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}

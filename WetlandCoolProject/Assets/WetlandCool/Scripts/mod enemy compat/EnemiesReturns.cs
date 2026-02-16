@@ -20,7 +20,7 @@ namespace FSCStage
         public static void AddEnemies()
         {
             // Lynx Totem
-            if (FSCStage.toggleLynxTotem.Value && LynxTotem.Enabled.Value && !LynxTotem.DefaultStageList.Value.Contains("foggyswampdownpour")) //Checking whether default stage list has Lynx Totems to avoid adding a duplicate spawn card
+            if (FSCStage.toggleLynxTotem.Value && General.EnableLynxTotem.Value && !LynxTotem.DefaultStageList.Value.Contains("foggyswampdownpour")) //Checking whether default stage list has Lynx Totems to avoid adding a duplicate spawn card
             {
                 var totemCard = new RoR2.DirectorCard()
                 {
@@ -41,7 +41,7 @@ namespace FSCStage
             }
 
             // Lynx Scout
-            if (FSCStage.toggleLynxScout.Value && (LynxTotem.Enabled.Value || LynxShaman.Enabled.Value) && !LynxScout.DefaultStageList.Value.Contains("foggyswampdownpour")) //Lynx Scouts don't have enable/disable config, so just adding these if at least one Lynx enemy is enabled
+            if (FSCStage.toggleLynxScout.Value && (General.EnableLynxTotem.Value || General.EnableLynxShaman.Value) && !LynxScout.DefaultStageList.Value.Contains("foggyswampdownpour")) //Lynx Scouts don't have enable/disable config, so just adding these if at least one Lynx enemy is enabled
             {
                 var scoutCard = new RoR2.DirectorCard()
                 {
@@ -62,7 +62,7 @@ namespace FSCStage
             }
 
             // Lynx Shaman
-            if (FSCStage.toggleLynxShaman.Value && LynxShaman.Enabled.Value && !LynxShaman.DefaultStageList.Value.Contains("foggyswampdownpour"))
+            if (FSCStage.toggleLynxShaman.Value && General.EnableLynxShaman.Value && !LynxShaman.DefaultStageList.Value.Contains("foggyswampdownpour"))
             {
                 var shamanCard = new RoR2.DirectorCard()
                 {
@@ -84,7 +84,7 @@ namespace FSCStage
 
 
             // Spitter
-            if (FSCStage.toggleSpitter.Value && Spitter.Enabled.Value && !Spitter.DefaultStageList.Value.Contains("foggyswampdownpour"))
+            if (FSCStage.toggleSpitter.Value && General.EnableSpitter.Value && !Spitter.DefaultStageList.Value.Contains("foggyswampdownpour"))
             {
                 var spitterCard = new RoR2.DirectorCard()
                 {
