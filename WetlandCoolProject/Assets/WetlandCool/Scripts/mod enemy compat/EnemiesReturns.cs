@@ -36,6 +36,7 @@ namespace FSCStage
                     MonsterCategory = DirectorAPI.MonsterCategory.Champions
                 };
                 DirectorAPI.Helpers.AddNewMonsterToStage(totemHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
+                DirectorAPI.Helpers.AddNewMonsterToStage(totemHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
                 Log.Info("Lynx Totem added to foggyswampdownpour's spawn pool.");
 
             }
@@ -57,6 +58,7 @@ namespace FSCStage
                     MonsterCategory = DirectorAPI.MonsterCategory.BasicMonsters
                 };
                 DirectorAPI.Helpers.AddNewMonsterToStage(scoutHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
+                DirectorAPI.Helpers.AddNewMonsterToStage(scoutHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
                 Log.Info("Lynx Scout added to foggyswampdownpour's spawn pool.");
 
             }
@@ -78,6 +80,7 @@ namespace FSCStage
                     MonsterCategory = DirectorAPI.MonsterCategory.BasicMonsters
                 };
                 DirectorAPI.Helpers.AddNewMonsterToStage(shamanHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
+                DirectorAPI.Helpers.AddNewMonsterToStage(shamanHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
                 Log.Info("Lynx Shaman added to foggyswampdownpour's spawn pool.");
 
             }
@@ -100,6 +103,7 @@ namespace FSCStage
                     MonsterCategory = DirectorAPI.MonsterCategory.Minibosses
                 };
                 DirectorAPI.Helpers.AddNewMonsterToStage(spitterHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
+                DirectorAPI.Helpers.AddNewMonsterToStage(spitterHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
                 Log.Info("Spitter added to foggyswampdownpour's spawn pool.");
             }
         }

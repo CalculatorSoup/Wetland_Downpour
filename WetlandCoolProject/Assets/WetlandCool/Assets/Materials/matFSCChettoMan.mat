@@ -131,7 +131,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaBoost: 1
+    - _AlphaBoost: 0.22
     - _AngleLimit: 0.5
     - _BlueChannelBias: 0
     - _BlueChannelSmoothness: 0
@@ -143,7 +143,7 @@ Material:
     - _DecalBlendMode: 0
     - _DecalDstBlend: 10
     - _DecalLayer: 1
-    - _DecalSrcBlend: 1
+    - _DecalSrcBlend: 5
     - _Depth: 0.2
     - _DetailNormalMapScale: 1
     - _DitherOn: 0
@@ -177,11 +177,11 @@ Material:
     - _LimbRemovalOn: 0
     - _LimitTo: 0
     - _MaskMultiplier: 1
-    - _MaskNormals: 1
+    - _MaskNormals: 0
     - _Metallic: 0
     - _Mode: 0
     - _NormalBlendMode: 0
-    - _NormalMultiplier: 1
+    - _NormalMultiplier: 0.5
     - _NormalStrength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02

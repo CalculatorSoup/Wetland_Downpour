@@ -1,3 +1,16 @@
+# 1.0.0
+- Wetland Downpour can now appear in the Simulacrum!
+  - Added a config option to toggle the Simulacrum variant
+  - Added a config option to toggle Wetland Downpour, in case you only want the Simulacrum version for whatever reason
+- Adjusted lighting and fog again (lol). Fog is a bit thicker, cliff wall material is darker, sun is less bright
+  - The map should still be significantly brighter than it was on iniital release. Let me know if I made it too dark again
+- Replaced grass texture with a new one that's slightly less visually noisy
+- Mud texture no longer appears on the outer cliff walls
+- Slightly lowered a pond to fix a tiny corner not connecting to the ground
+- Added the artifact code tablet from Wetland Aspect (thanks to Viliger for providing the script used to add this!)
+- Updated logbook screenshot, preview images and README to reflect changes I've made to the map over time
+- I also intended to add a couple extra effects to the water (audio muffling in particular) for this update but I looked into it for like 20 minutes, learned that I could not just steal the script from [Fogbound Lagoon](https://thunderstore.io/package/JaceDaDorito/FogboundLagoon/) and have it magically work with the ponds in this map, and determined I am too stupid to figure it out. Sorry
+
 # 0.2.3
 - Added Simplified Chinese translation (thanks to JunJun5406 on github for submitting this!)
 - Updated code for adding monsters from EnemiesReturns to not use deprecated config options

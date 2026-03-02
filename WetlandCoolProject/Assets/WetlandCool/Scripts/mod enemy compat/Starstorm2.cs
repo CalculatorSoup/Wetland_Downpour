@@ -46,6 +46,7 @@ namespace FSCStage
                     MonsterCategory = DirectorAPI.MonsterCategory.Champions
                 };
                 DirectorAPI.Helpers.AddNewMonsterToStage(wayfarerHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
+                DirectorAPI.Helpers.AddNewMonsterToStage(wayfarerHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
                 Log.Info("Wayfarer added to foggyswampdownpour's spawn pool.");
             }
 
@@ -67,6 +68,7 @@ namespace FSCStage
                     MonsterCategory = DirectorAPI.MonsterCategory.BasicMonsters
                 };
                 DirectorAPI.Helpers.AddNewMonsterToStage(followerHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
+                DirectorAPI.Helpers.AddNewMonsterToStage(followerHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
                 Log.Info("Follower added to foggyswampdownpour's spawn pool.");
             }
 
@@ -92,6 +94,7 @@ namespace FSCStage
                         MonsterCategory = DirectorAPI.MonsterCategory.BasicMonsters
                     };
                     DirectorAPI.Helpers.AddNewMonsterToStage(acidBugHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
+                    DirectorAPI.Helpers.AddNewMonsterToStage(acidBugHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
                     Log.Info("Archer Wasp added to foggyswampdownpour's spawn pool.");
 
                 }

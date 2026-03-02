@@ -33,9 +33,14 @@ namespace FSCStage.Content
         internal static UnlockableDef[] UnlockableDefs;
         internal static SceneDef[] SceneDefs;
 
+        //Wetland Downpour
         internal static SceneDef FSCSceneDef;
         internal static Sprite FSCSceneDefPreviewSprite;
         internal static Material FSCBazaarSeer;
+        //Simulacrum Variant
+        internal static SceneDef SimuSceneDef;
+        internal static Sprite SimuSceneDefPreviewSprite;
+        internal static Material SimuBazaarSeer;
 
         public static List<Material> SwappedMaterials = new List<Material>();
 
@@ -59,17 +64,21 @@ namespace FSCStage.Content
             yield return LoadAllAssetsAsync(_assetsAssetBundle, progress, (Action<Sprite[]>)((assets) =>
             {
                 FSCSceneDefPreviewSprite = assets.First(a => a.name == "texFSCScenePreview");
+                SimuSceneDefPreviewSprite = assets.First(a => a.name == "texFSCScenePreview");
             }));
 
             yield return LoadAllAssetsAsync(_assetsAssetBundle, progress, (Action<SceneDef[]>)((assets) =>
             {
                 SceneDefs = assets;
                 FSCSceneDef = SceneDefs.First(sd => sd.baseSceneNameOverride == "foggyswampdownpour");
+                SimuSceneDef = SceneDefs.First(sd => sd.baseSceneNameOverride == "itfoggyswampdownpour");
                 Log.Debug(FSCSceneDef.nameToken);
+                Log.Debug(SimuSceneDef.nameToken);
                 contentPack.sceneDefs.Add(assets);
             }));
 
             FSCSceneDef.portalMaterial = R2API.StageRegistration.MakeBazaarSeerMaterial((Texture2D)FSCSceneDef.previewTexture);
+            SimuSceneDef.portalMaterial = R2API.StageRegistration.MakeBazaarSeerMaterial((Texture2D)FSCSceneDef.previewTexture);
 
             var mainTrackDefRequest = Addressables.LoadAssetAsync<MusicTrackDef>("RoR2/Base/Common/MusicTrackDefs/muFULLSong06.asset");
             while (!mainTrackDefRequest.IsDone)
@@ -81,19 +90,39 @@ namespace FSCStage.Content
             {
                 yield return null;
             }
+            
             FSCSceneDef.mainTrack = mainTrackDefRequest.Result;
             FSCSceneDef.bossTrack = bossTrackDefRequest.Result;
 
-            if (FSCStage.loopVariant.Value)
+            SimuSceneDef.mainTrack = mainTrackDefRequest.Result;
+            SimuSceneDef.bossTrack = bossTrackDefRequest.Result;
+
+            // register Wetland Downpour
+            if (FSCStage.regularEnabled.Value)
             {
-                R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, 0, false, true);  // Downpour replaces Wetland Aspect via script, so setting weight to 0 to not make Wetland variants more common
-            } else if (FSCStage.replaceFoggyswamp.Value)
-            {
-                R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, 0);
-            } else
-            {
-                R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef);
+                if (FSCStage.loopVariant.Value)
+                {
+                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, 0, false, true);  // Downpour replaces Wetland Aspect via script, so setting weight to 0 to not make Wetland variants more common
+                }
+                else if (FSCStage.replaceFoggyswamp.Value)
+                {
+                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, 0);
+                }
+                else
+                {
+                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef);
+                }
             }
+
+            // Register Simulacrum variant
+            if (FSCStage.simulacrumEnabled.Value && FSCStage.simulacrumStage1.Value)
+            {
+                Simulacrum.RegisterSceneToSimulacrum(SimuSceneDef);
+            } else if (FSCStage.simulacrumEnabled.Value && !FSCStage.simulacrumStage1.Value)
+            {
+                Simulacrum.RegisterSceneToSimulacrum(SimuSceneDef, false);
+            }
+
         }
 
 internal static void Unload()

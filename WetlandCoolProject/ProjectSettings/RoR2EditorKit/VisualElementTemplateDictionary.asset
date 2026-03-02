@@ -31,3 +31,7 @@ MonoBehaviour:
     _hexRepresentation: d8821e738f95f48498530303e90d440d
   - k_templateName: MapNodeGroupInspector
     _hexRepresentation: b345abf5b27531443ba58f574bc59102
+  - k_templateName: EntityStateMachineInspector
+    _hexRepresentation: 80f85cf135da6ea41834b0e48a22acfa
+  - k_templateName: ContextMenuWrapperElement
+    _hexRepresentation: 77311b170172e5f459337eef42862d00

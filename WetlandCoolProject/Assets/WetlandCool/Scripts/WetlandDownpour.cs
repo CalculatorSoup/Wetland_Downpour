@@ -18,6 +18,7 @@ using System.Security.Permissions;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Diagnostics;
+using UnityEngine.SceneManagement;
 using ContentProvider = FSCStage.Content.ContentProvider;
 //Copied from Fogbound Lagoon copied from Nuketown
 
@@ -30,9 +31,6 @@ using ContentProvider = FSCStage.Content.ContentProvider;
 
 namespace FSCStage
 {
-    [BepInDependency("com.TeamMoonstorm", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInDependency("com.Viliger.EnemiesReturns", BepInDependency.DependencyFlags.SoftDependency)]
-
     [BepInPlugin(GUID, Name, Version)]
     public class FSCStage : BaseUnityPlugin
     {
@@ -40,7 +38,7 @@ namespace FSCStage
 
         public const string Name = "WetlandDownpour";
 
-        public const string Version = "0.2.3";
+        public const string Version = "1.0.0";
 
         public const string GUID = Author + "." + Name;
 
@@ -48,6 +46,10 @@ namespace FSCStage
 
         public static ConfigEntry<bool> loopVariant;
         public static ConfigEntry<bool> replaceFoggyswamp;
+        public static ConfigEntry<bool> regularEnabled;
+
+        public static ConfigEntry<bool> simulacrumEnabled;
+        public static ConfigEntry<bool> simulacrumStage1;
 
         public static ConfigEntry<bool> toggleWayfarer;
         public static ConfigEntry<bool> toggleFollower;
@@ -75,6 +77,8 @@ namespace FSCStage
             RoR2.Run.onRunStartGlobal += InitializeBazaarSeerValues;
 
             RoR2.RoR2Application.onLoadFinished += AddModdedEnemies;
+
+            SceneManager.sceneLoaded += SceneSetup;
         }
 
         public static void AddModdedEnemies()
@@ -88,10 +92,6 @@ namespace FSCStage
             {
                 EnemiesReturnsCompat.AddEnemies(); //Lynx Totem, Lynx Scout, Spitter
             }
-
-
-            
-
         }
 
         // As far as I can tell, R2API / LoP / etc. don't really have any tools for easily / cleanly setting up a post-loop variant for a vanilla map.
@@ -149,6 +149,22 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
             }
         }
 
+        public void SceneSetup(Scene newScene, LoadSceneMode loadSceneMode)
+        {
+            if (newScene.name == "itfoggyswampdownpour")
+            {
+                GameObject terrainObject = GameObject.Find("FSFloor/SubMesh_0");
+                terrainObject.TryGetComponent(out MeshRenderer terrainRenderer);
+                
+                Material terrainMaterial = terrainRenderer.material;
+                Material voidMaterial = Addressables.LoadAssetAsync<Material>("RoR2/DLC1/GameModes/InfiniteTowerRun/ITAssets/matInfiniteTowerBooleanEffect1.mat").WaitForCompletion();
+                
+                Material[] materialList = { terrainMaterial, voidMaterial };
+                
+                terrainRenderer.SetSharedMaterials(materialList, 2);
+            }
+        }
+
         private void Destroy()
         {
             RoR2.Language.collectLanguageRootFolders -= CollectLanguageRootFolders;
@@ -162,6 +178,7 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
         public void CollectLanguageRootFolders(List<string> folders)
         {
             folders.Add(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(base.Info.Location), "Language"));
+            folders.Add(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(base.Info.Location), "Plugins/Language"));
         }
 
         private void ConfigSetup()
@@ -176,6 +193,21 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
                                        "Replace Wetland Aspect",
                                        false,
                                        "If true, Wetland Downpour will always replace Wetland Aspect, before and after looping, regardless of what value Loop Variant is set to.");
+            regularEnabled =
+                base.Config.Bind<bool>("Settings",
+                                       "Enable Wetland Downpour",
+                                       true,
+                                       "If true, Wetland Downpour can appear in regular runs.");
+            simulacrumEnabled =
+                base.Config.Bind<bool>("Settings - Simulacrum",
+                                       "Enable Simulacrum Variant",
+                                       true,
+                                       "If true, Wetland Downpour can appear in the Simulacrum.");
+            simulacrumStage1 =
+                base.Config.Bind<bool>("Settings - Simulacrum",
+                                       "Enable on Stage 1",
+                                       true,
+                                       "If true, Wetland Downpour can appear as the first stage in the Simulacrum. If false, it can only appear on stage 2 or higher, like Commencement.");
             toggleWayfarer =
                 base.Config.Bind<bool>("Settings - Starstorm 2",
                                        "Wayfarer",

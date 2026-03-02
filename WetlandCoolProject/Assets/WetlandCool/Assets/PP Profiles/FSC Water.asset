@@ -80,13 +80,13 @@ MonoBehaviour:
     value: 0.5
   fogPower:
     overrideState: 1
-    value: 0.225
+    value: 0.1
   fogZero:
     overrideState: 0
     value: 0
   fogOne:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.3
   fogHeightStart:
     overrideState: 0
     value: 0

@@ -128,7 +128,7 @@ MonoBehaviour:
   - {fileID: 541228467447792175}
   - {fileID: 4593826392357068102}
   - {fileID: 3721228057138571677}
-  configurationIndex: -1
+  configurationIndex: 19
   totalImportExtensionCount: 19
 --- !u!114 &541228467447792175
 MonoBehaviour:
@@ -274,7 +274,7 @@ MonoBehaviour:
     description: R2API_Buffs
     dependedncyID: RiskofThunder-R2API_Buffs
     shouldInstall: 1
-    isHardDependency: 0
+    isHardDependency: 1
     dependencies:
     - R2API_Core
     - HookGenPatcher
@@ -491,63 +491,60 @@ MonoBehaviour:
     - BepInExPack
     - R2API_Core
     - HookGenPatcher
-  - submoduleName: R2API_Sound
-    description: R2API_Sound
-    dependedncyID: RiskofThunder-R2API_Sound
+  - submoduleName: R2API_Skins
+    description: R2API_Skins
+    dependedncyID: RiskofThunder-R2API_Skins
     shouldInstall: 1
     isHardDependency: 1
     dependencies:
     - BepInExPack
     - R2API_Core
     - HookGenPatcher
-    - R2API_ContentManagement
-  - submoduleName: R2API_Stages
-    description: R2API_Stages
-    dependedncyID: RiskofThunder-R2API_Stages
+  - submoduleName: R2API_Skins
+    description: R2API_Skins
+    dependedncyID: RiskofThunder-R2API_Skins
     shouldInstall: 1
     isHardDependency: 1
     dependencies:
     - BepInExPack
     - R2API_Core
     - HookGenPatcher
-  - submoduleName: R2API_StringSerializerExtensions
-    description: R2API_StringSerializerExtensions
-    dependedncyID: RiskofThunder-R2API_StringSerializerExtensions
+  - submoduleName: R2API_Skins
+    description: R2API_Skins
+    dependedncyID: RiskofThunder-R2API_Skins
     shouldInstall: 1
     isHardDependency: 1
     dependencies:
     - BepInExPack
     - R2API_Core
     - HookGenPatcher
-  - submoduleName: R2API_Teams
-    description: R2API_Teams
-    dependedncyID: RiskofThunder-R2API_Teams
+  - submoduleName: R2API_Skins
+    description: R2API_Skins
+    dependedncyID: RiskofThunder-R2API_Skins
     shouldInstall: 1
     isHardDependency: 1
     dependencies:
     - BepInExPack
     - R2API_Core
     - HookGenPatcher
-  - submoduleName: R2API_TempVisualEffect
-    description: R2API_TempVisualEffect
-    dependedncyID: RiskofThunder-R2API_TempVisualEffect
+  - submoduleName: R2API_Skins
+    description: R2API_Skins
+    dependedncyID: RiskofThunder-R2API_Skins
     shouldInstall: 1
     isHardDependency: 1
     dependencies:
     - BepInExPack
     - R2API_Core
     - HookGenPatcher
-    - R2API_ContentManagement
-  - submoduleName: R2API_Unlockable
-    description: R2API_Unlockable
-    dependedncyID: RiskofThunder-R2API_Unlockable
+  - submoduleName: R2API_Skins
+    description: R2API_Skins
+    dependedncyID: RiskofThunder-R2API_Skins
     shouldInstall: 1
     isHardDependency: 1
     dependencies:
     - BepInExPack
     - R2API_Core
     - HookGenPatcher
-    - R2API_ContentManagement
 --- !u!114 &5161513746007735421
 MonoBehaviour:
   m_ObjectHideFlags: 0
