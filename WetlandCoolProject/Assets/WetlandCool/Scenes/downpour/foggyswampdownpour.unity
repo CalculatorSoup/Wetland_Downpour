@@ -4295,7 +4295,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1987149910}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &24110520
 MonoBehaviour:
@@ -76229,9 +76229,9 @@ GameObject:
   - component: {fileID: 428433287}
   - component: {fileID: 428433292}
   - component: {fileID: 428433290}
-  - component: {fileID: 428433293}
-  - component: {fileID: 428433294}
-  m_Layer: 4
+  - component: {fileID: 428433296}
+  - component: {fileID: 428433295}
+  m_Layer: 15
   m_Name: Water Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76247,7 +76247,7 @@ Transform:
   m_GameObject: {fileID: 428433286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.01, y: -18.3, z: 0}
-  m_LocalScale: {x: 1.0651, y: 42.42, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 454973408}
@@ -76264,7 +76264,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.39, y: 0.86, z: 10.78}
+  m_Size: {x: 7.39, y: 37.25, z: 10.78}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &428433292
 MeshFilter:
@@ -76274,7 +76274,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428433286}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &428433293
+--- !u!114 &428433295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76283,11 +76283,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 428433286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1052602003, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Script: {fileID: 11500000, guid: 45cbb34b6f3462f4495a1e233b7eeabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaceDef: {fileID: 0}
---- !u!114 &428433294
+  gravityCoefficient: 0.6
+--- !u!114 &428433296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76296,10 +76296,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 428433286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3f6bc89640549408c2a4c5f9a7d0f9, type: 3}
+  m_Script: {fileID: 11500000, guid: f56b6238f0fbaf048b4f22a1fb14dd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaceDefAddress: RoR2/Base/Common/sdWater.asset
 --- !u!1 &428516843
 GameObject:
   m_ObjectHideFlags: 0
@@ -83703,6 +83702,7 @@ Transform:
   m_Children:
   - {fileID: 1784427613}
   - {fileID: 428433287}
+  - {fileID: 789883771}
   - {fileID: 1091273227}
   m_Father: {fileID: 1253319005}
   m_RootOrder: 0
@@ -149187,6 +149187,88 @@ MonoBehaviour:
   forbiddenHulls: 0
   flags: 1
   gateName: LakeBonusLog
+--- !u!1 &789883770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789883771}
+  - component: {fileID: 789883775}
+  - component: {fileID: 789883774}
+  - component: {fileID: 789883773}
+  - component: {fileID: 789883772}
+  m_Layer: 4
+  m_Name: Water Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &789883771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789883770}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01, y: -18.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 454973408}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &789883772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789883770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3f6bc89640549408c2a4c5f9a7d0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceDefAddress: RoR2/Base/Common/sdWater.asset
+--- !u!114 &789883773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789883770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1052602003, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceDef: {fileID: 0}
+--- !u!65 &789883774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789883770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.39, y: 37.25, z: 10.78}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &789883775
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789883770}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &789940244
 GameObject:
   m_ObjectHideFlags: 0
@@ -171983,6 +172065,88 @@ MonoBehaviour:
   forbiddenHulls: 0
   flags: 0
   gateName: Cliff
+--- !u!1 &912058316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912058317}
+  - component: {fileID: 912058321}
+  - component: {fileID: 912058320}
+  - component: {fileID: 912058319}
+  - component: {fileID: 912058318}
+  m_Layer: 4
+  m_Name: Water Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &912058317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912058316}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.14691305, y: -8.299995, z: 0.18932924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1987149910}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &912058318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912058316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3f6bc89640549408c2a4c5f9a7d0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceDefAddress: RoR2/Base/Common/sdWater.asset
+--- !u!114 &912058319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912058316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1052602003, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceDef: {fileID: 0}
+--- !u!65 &912058320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912058316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.46, y: 17.5, z: 10.78}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &912058321
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912058316}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &912623316
 GameObject:
   m_ObjectHideFlags: 0
@@ -203409,7 +203573,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 454973408}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1091273228
 MonoBehaviour:
@@ -250570,7 +250734,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1929572038}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1356502298
 MonoBehaviour:
@@ -253212,9 +253376,9 @@ GameObject:
   - component: {fileID: 1370697834}
   - component: {fileID: 1370697838}
   - component: {fileID: 1370697836}
-  - component: {fileID: 1370697839}
-  - component: {fileID: 1370697840}
-  m_Layer: 4
+  - component: {fileID: 1370697842}
+  - component: {fileID: 1370697841}
+  m_Layer: 15
   m_Name: Water Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253230,7 +253394,7 @@ Transform:
   m_GameObject: {fileID: 1370697833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.14691305, y: -8.299995, z: 0.18932924}
-  m_LocalScale: {x: 1.2757206, y: 19.37, z: 0.9173604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1987149910}
@@ -253247,7 +253411,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.39, y: 0.86, z: 10.78}
+  m_Size: {x: 9.46, y: 17.5, z: 10.78}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1370697838
 MeshFilter:
@@ -253257,7 +253421,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370697833}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1370697839
+--- !u!114 &1370697841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253266,11 +253430,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1370697833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1052602003, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Script: {fileID: 11500000, guid: 45cbb34b6f3462f4495a1e233b7eeabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaceDef: {fileID: 0}
---- !u!114 &1370697840
+  gravityCoefficient: 0.6
+--- !u!114 &1370697842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253279,10 +253443,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1370697833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3f6bc89640549408c2a4c5f9a7d0f9, type: 3}
+  m_Script: {fileID: 11500000, guid: f56b6238f0fbaf048b4f22a1fb14dd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaceDefAddress: RoR2/Base/Common/sdWater.asset
 --- !u!1 &1370722603
 GameObject:
   m_ObjectHideFlags: 0
@@ -274410,9 +274573,9 @@ GameObject:
   - component: {fileID: 1480135753}
   - component: {fileID: 1480135756}
   - component: {fileID: 1480135755}
-  - component: {fileID: 1480135757}
-  - component: {fileID: 1480135758}
-  m_Layer: 4
+  - component: {fileID: 1480135760}
+  - component: {fileID: 1480135759}
+  m_Layer: 15
   m_Name: Water Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274428,7 +274591,7 @@ Transform:
   m_GameObject: {fileID: 1480135752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1, y: -7.74, z: 0.39}
-  m_LocalScale: {x: 1.36, y: 18.08, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1929572038}
@@ -274445,7 +274608,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.39, y: 0.86, z: 10.78}
+  m_Size: {x: 10.1, y: 16.41, z: 10.78}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1480135756
 MeshFilter:
@@ -274455,7 +274618,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480135752}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1480135757
+--- !u!114 &1480135759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274464,11 +274627,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480135752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1052602003, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Script: {fileID: 11500000, guid: 45cbb34b6f3462f4495a1e233b7eeabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaceDef: {fileID: 0}
---- !u!114 &1480135758
+  gravityCoefficient: 0.6
+--- !u!114 &1480135760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274477,10 +274640,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480135752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b3f6bc89640549408c2a4c5f9a7d0f9, type: 3}
+  m_Script: {fileID: 11500000, guid: f56b6238f0fbaf048b4f22a1fb14dd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaceDefAddress: RoR2/Base/Common/sdWater.asset
 --- !u!1 &1480679741
 GameObject:
   m_ObjectHideFlags: 0
@@ -353452,6 +353614,7 @@ Transform:
   m_Children:
   - {fileID: 1006267527}
   - {fileID: 1480135753}
+  - {fileID: 2143436671}
   - {fileID: 1356502297}
   m_Father: {fileID: 1253319005}
   m_RootOrder: 1
@@ -363185,6 +363348,7 @@ Transform:
   m_Children:
   - {fileID: 12153434}
   - {fileID: 1370697834}
+  - {fileID: 912058317}
   - {fileID: 24110519}
   m_Father: {fileID: 1253319005}
   m_RootOrder: 2
@@ -395851,6 +396015,88 @@ MonoBehaviour:
   forbiddenHulls: 6
   flags: 1
   gateName: 
+--- !u!1 &2143436670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143436671}
+  - component: {fileID: 2143436675}
+  - component: {fileID: 2143436674}
+  - component: {fileID: 2143436673}
+  - component: {fileID: 2143436672}
+  m_Layer: 4
+  m_Name: Water Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &2143436671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143436670}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.1, y: -7.74, z: 0.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1929572038}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2143436672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143436670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3f6bc89640549408c2a4c5f9a7d0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceDefAddress: RoR2/Base/Common/sdWater.asset
+--- !u!114 &2143436673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143436670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1052602003, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceDef: {fileID: 0}
+--- !u!65 &2143436674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143436670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.1, y: 16.41, z: 10.78}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &2143436675
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143436670}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2143876629
 GameObject:
   m_ObjectHideFlags: 0

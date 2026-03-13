@@ -38,7 +38,7 @@ namespace FSCStage
 
         public const string Name = "WetlandDownpour";
 
-        public const string Version = "1.0.0";
+        public const string Version = "1.0.1";
 
         public const string GUID = Author + "." + Name;
 
@@ -47,6 +47,7 @@ namespace FSCStage
         public static ConfigEntry<bool> loopVariant;
         public static ConfigEntry<bool> replaceFoggyswamp;
         public static ConfigEntry<bool> regularEnabled;
+        public static ConfigEntry<bool> waterMuffle;
 
         public static ConfigEntry<bool> simulacrumEnabled;
         public static ConfigEntry<bool> simulacrumStage1;
@@ -198,6 +199,11 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
                                        "Enable Wetland Downpour",
                                        true,
                                        "If true, Wetland Downpour can appear in regular runs.");
+            waterMuffle =
+                base.Config.Bind<bool>("Settings",
+                                       "Underwater Music Muffling",
+                                       true,
+                                       "If true, music will get muffled while the camera is underwater in Wetland Downpour.");
             simulacrumEnabled =
                 base.Config.Bind<bool>("Settings - Simulacrum",
                                        "Enable Simulacrum Variant",

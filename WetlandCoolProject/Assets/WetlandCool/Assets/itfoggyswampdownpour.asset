@@ -35,7 +35,7 @@ MonoBehaviour:
     m_SubObjectType: 
   portalSelectionMessageString: 
   filterOutOfBazaar: 0
-  shouldIncludeInLogbook: 1
+  shouldIncludeInLogbook: 0
   loreToken: MAP_ARENA_LORE
   dioramaPrefab: {fileID: 8548330779601887739, guid: b01131f7fc1d3d442b70ec0b74119cc6, type: 3}
   dioramaPrefabAddress:

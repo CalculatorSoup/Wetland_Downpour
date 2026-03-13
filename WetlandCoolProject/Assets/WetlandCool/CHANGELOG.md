@@ -1,3 +1,11 @@
+# 1.0.1
+- Fixed the Simulacrum variant's scene def having "Should Include in Logbook" enabled (oops)
+- Fixed the Simulacrum variant's DLC1 ADCCS not having a target DCCS file (oops 2)
+- Fixed Solus Transporters having a selection weight of 0 and thus never appearing (oops 3). Also made them appear after 5 stage completions
+- Added extra functionality to the water, based on the water mechanics in [Fogbound Lagoon](https://thunderstore.io/package/JaceDaDorito/FogboundLagoon/)
+  - Gravity is now lower in the ponds
+  - Music now gets muffled while the camera is submerged underwater (also added a config option to toggle this)
+
 # 1.0.0
 - Wetland Downpour can now appear in the Simulacrum!
   - Added a config option to toggle the Simulacrum variant
