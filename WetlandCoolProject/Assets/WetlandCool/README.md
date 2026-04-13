@@ -8,7 +8,7 @@ Wetland Downpour is a loop-exclusive stage variant for Wetland Aspect with a lus
 
 This mod also includes a Void replication of Wetland Downpour with partially-decimated terrain, exclusive to SotV's Simulacrum gamemode.
 
-![](https://github.com/CalculatorSoup/Wetland_Downpour/blob/main/WetlandCoolProject/Assets/preview%simulacrum.png?raw=true)
+![](https://github.com/CalculatorSoup/Wetland_Downpour/blob/main/WetlandCoolProject/Assets/preview%20simulacrum.png?raw=true)
 
 ## Other Features
 * **Gameplay changes (compared to Wetland Aspect)**
@@ -33,7 +33,6 @@ This mod also includes a Void replication of Wetland Downpour with partially-dec
 * **Some monsters from other mods can appear if their respective mods are enabled**
   * [Starstorm 2](https://thunderstore.io/package/TeamMoonstorm/Starstorm2/): Follower, Wayfarer, Archer Bug
   * [EnemiesReturns](https://thunderstore.io/package/Risky_Sleeps/EnemiesReturns/): Lynx Totem, Lynx Scout, Spitter
-
 ## Bugs / Issues
 
 This is my first mod I've released for Risk of Rain 2 (and just generally the first mod I've ever completed and released for anything), so it's kind of a miracle that this works at all. I haven't tested it much outside of repeatedly playing it in singleplayer and multiplayer runs with/without ~100 other mods installed.

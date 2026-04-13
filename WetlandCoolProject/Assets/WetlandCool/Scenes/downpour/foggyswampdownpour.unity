@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 539968692}
-  m_IndirectSpecularColor: {r: 0.09820822, g: 0.1831379, b: 0.18933141, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -168937,6 +168937,52 @@ MonoBehaviour:
   forbiddenHulls: 0
   flags: 1
   gateName: 
+--- !u!1 &897238361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 897238362}
+  - component: {fileID: 897238363}
+  m_Layer: 11
+  m_Name: Tablet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &897238362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897238361}
+  m_LocalRotation: {x: 0.063710324, y: 0.8509749, z: 0.13601355, w: -0.5032725}
+  m_LocalPosition: {x: 19.900024, y: -3.39, z: -26.419922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2129360915}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -17.194, y: 241.459, z: -1.708}
+--- !u!114 &897238363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897238361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b24f6465f4eb9d419c7431b38afc538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {fileID: 897238362}
+  code: 000000000000000000000000020000000300000002000000000000000300000000000000
 --- !u!1 &897687180
 GameObject:
   m_ObjectHideFlags: 0
@@ -349999,52 +350045,6 @@ MonoBehaviour:
   forbiddenHulls: 0
   flags: 1
   gateName: 
---- !u!1 &1910392107
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1910392108}
-  - component: {fileID: 1910392109}
-  m_Layer: 11
-  m_Name: Tablet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1910392108
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910392107}
-  m_LocalRotation: {x: 0.063710324, y: 0.8509749, z: 0.13601355, w: -0.5032725}
-  m_LocalPosition: {x: 19.900024, y: -3.39, z: -26.419922}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2129360915}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -17.194, y: 241.459, z: -1.708}
---- !u!114 &1910392109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910392107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a59d42cad1e1b14a8397a43d55f79df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {fileID: 1910392108}
-  code: 000000000000000000000000020000000300000002000000000000000300000000000000
 --- !u!1 &1910748535
 GameObject:
   m_ObjectHideFlags: 0
@@ -392833,7 +392833,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1159608283}
-  - {fileID: 1910392108}
+  - {fileID: 897238362}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

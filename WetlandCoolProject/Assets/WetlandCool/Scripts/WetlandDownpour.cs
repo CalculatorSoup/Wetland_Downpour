@@ -3,8 +3,6 @@ using BepInEx.Bootstrap;
 using BepInEx.Configuration;
 using FSCStage.Content;
 using HG;
-using IL.RoR2;
-using On.RoR2;
 using R2API;
 using RoR2;
 using RoR2.ContentManagement;
@@ -18,6 +16,7 @@ using System.Security.Permissions;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Diagnostics;
+using RoR2.Artifacts;
 using UnityEngine.SceneManagement;
 using ContentProvider = FSCStage.Content.ContentProvider;
 //Copied from Fogbound Lagoon copied from Nuketown
@@ -38,7 +37,7 @@ namespace FSCStage
 
         public const string Name = "WetlandDownpour";
 
-        public const string Version = "1.0.1";
+        public const string Version = "1.0.2";
 
         public const string GUID = Author + "." + Name;
 
@@ -60,6 +59,7 @@ namespace FSCStage
         public static ConfigEntry<bool> toggleLynxScout;
         public static ConfigEntry<bool> toggleLynxShaman;
         public static ConfigEntry<bool> toggleSpitter;
+        public static ConfigEntry<bool> toggleArcherBugER;
 
         private void Awake()
         {
@@ -73,7 +73,7 @@ namespace FSCStage
 
             RoR2.Language.collectLanguageRootFolders += CollectLanguageRootFolders;
 
-            On.RoR2.Run.PickNextStageScene += ReplaceWetlandAspect;
+            //On.RoR2.Run.PickNextStageScene += ReplaceWetlandAspect;
 
             RoR2.Run.onRunStartGlobal += InitializeBazaarSeerValues;
 
@@ -93,37 +93,68 @@ namespace FSCStage
             {
                 EnemiesReturnsCompat.AddEnemies(); //Lynx Totem, Lynx Scout, Spitter
             }
+
+            // As far as I can tell, R2API / LoP / etc. don't really have any tools for easily / cleanly setting up a post-loop variant for a vanilla map.
+            // If they do, please tell me so I can replace all of this.
+
+            // Despite being called AddModdedEnemies, this also handles setting up Wetland Aspect's weight depending on the config options selected.
+            SceneCollection sgStage2 = Addressables.LoadAssetAsync<SceneCollection>(RoR2BepInExPack.GameAssetPathsBetter.RoR2_Base_SceneGroups.sgStage2_asset).WaitForCompletion();
+            SceneCollection loopSgStage2 = Addressables.LoadAssetAsync<SceneCollection>(RoR2BepInExPack.GameAssetPathsBetter.RoR2_Base_SceneGroups.loopSgStage2_asset).WaitForCompletion();
+            RoR2.SceneDef foggyswamp = RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp");
+
+            if (regularEnabled.Value)
+            {
+                if (loopVariant.Value && !replaceFoggyswamp.Value)
+                {
+                    FSCContent.SetSceneWeight(foggyswamp, 1, sgStage2);
+                    FSCContent.SetSceneWeight(foggyswamp, 0, loopSgStage2);
+                    RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp").loopedSceneDef = RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswampdownpour");
+                    Log.Debug("Wetland Downpour registered (replace Wetland Aspect after looping)");
+
+                }
+                else if (replaceFoggyswamp.Value)
+                {
+                    FSCContent.SetSceneWeight(foggyswamp, 0, sgStage2);
+                    FSCContent.SetSceneWeight(foggyswamp, 0, loopSgStage2);
+                    foggyswamp.filterOutOfBazaar = true;
+
+                    Log.Debug("Wetland Downpour registered (always replace Wetland Aspect)");
+                }
+                else
+                {
+                    FSCContent.SetSceneWeight(foggyswamp, StageRegistration.defaultWeight / 2, sgStage2);
+                    FSCContent.SetSceneWeight(foggyswamp, StageRegistration.defaultWeight / 2, loopSgStage2);
+
+                    Log.Debug("Wetland Downpour registered (both Downpour and Aspect always in stage rotation. Weights for Aspect and Downpour halved)");
+                }
+
+            }
+
         }
-
-        // As far as I can tell, R2API / LoP / etc. don't really have any tools for easily / cleanly setting up a post-loop variant for a vanilla map.
-        // If they do, please tell me so I can replace all of this.
-        // But basically, I just do some hokey jank ass code instead.
-
-        // Wetland Downpour is registered via R2API.StageRegistration in WetlandDownpourContent, but given 0 weight so it can never appear naturally.
-        // After progressing through a certain number of stages, if the game picks Wetland Aspect as the next stage, I override it so it goes to Wetland Downpour instead.
-        // That only works for normally going through stages but *not* for the bazaar, so I also have it set the 'filterOutOfBazaar' values for both maps accordingly.
-        // Fun
 
         public void InitializeBazaarSeerValues(RoR2.Run run)
         {
-
-            if (FSCStage.loopVariant.Value && !FSCStage.replaceFoggyswamp.Value)
+            if (loopVariant.Value && !replaceFoggyswamp.Value)
             {
                 RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp").filterOutOfBazaar = false;
                 RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswampdownpour").filterOutOfBazaar = true;
-            } else if (FSCStage.replaceFoggyswamp.Value)
+            } else if (replaceFoggyswamp.Value)
             {
                 RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp").filterOutOfBazaar = true;
                 RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswampdownpour").filterOutOfBazaar = false;
             }
         }
+
+// old code for swapping out Wetland Aspect for Wetland Downpour. This is no longer needed, but left commented out here just in case I might need to revert back to this
+
+/*
 public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.Run self, WeightedSelection<RoR2.SceneDef> choices)
         {
             orig.Invoke(self, choices);
 
             if (FSCStage.loopVariant.Value && !FSCStage.replaceFoggyswamp.Value)
             {
-                /* if you are going to foggyswamp and more than 3 stages have been cleared, replace it with Wetland Downpour and remove it from Bazaar seer selection */
+                //if you are going to foggyswamp and more than 3 stages have been cleared, replace it with Wetland Downpour and remove it from Bazaar seer selection
                 if (RoR2.Run.instance.stageClearCount > 3 && RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp").filterOutOfBazaar != true)
                 {
                     RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp").filterOutOfBazaar = true;
@@ -140,7 +171,7 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
             }
             else if (FSCStage.replaceFoggyswamp.Value)
             {
-                /* if you are going to foggyswamp at any stage, replace it with Wetland Downpour */
+                //if you are going to foggyswamp at any stage, replace it with Wetland Downpour
                     if ((object)self.nextStageScene.baseSceneName != null && (self.nextStageScene.baseSceneName == "foggyswamp"))
                     {
                         self.nextStageScene = RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswampdownpour");
@@ -149,9 +180,20 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
                     }
             }
         }
-
+*/
         public void SceneSetup(Scene newScene, LoadSceneMode loadSceneMode)
         {
+            //Set weight and bazaar seer filters for each stage depending on whether they should be active
+            if (regularEnabled.Value && loopVariant.Value && !replaceFoggyswamp.Value && RoR2.Run.instance)
+            {
+                if (RoR2.Run.instance.stageClearCount == 5 && RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp").filterOutOfBazaar != true)
+                {
+                    RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp").filterOutOfBazaar = true;
+                    RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswampdownpour").filterOutOfBazaar = false;
+                    Log.Debug("Bazaar filter values for foggyswamp and foggyswampdownpour swapped");
+                }
+            }
+
             if (newScene.name == "itfoggyswampdownpour")
             {
                 GameObject terrainObject = GameObject.Find("FSFloor/SubMesh_0");
@@ -249,6 +291,11 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
                                        "Spitter",
                                        true,
                                        "If true, Spitters can appear in Wetland Downpour.");
+            toggleArcherBugER =
+                base.Config.Bind<bool>("Settings - EnemiesReturns",
+                                       "Archer Bug",
+                                       false,
+                                       "If true, Archer Bugs can appear in Wetland Downpour (after clearing 5 stages).");
         }
     }
 }

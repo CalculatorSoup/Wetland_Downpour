@@ -199,7 +199,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "b3a4dbc99305a90e7455dbc69940f7eee0054886"
+      "hash": "f6bb7fef22917dfc76a1d879873d924028ab0afe"
     },
     "kingenderbrine-lobbyskinsfix": {
       "version": "file:LobbySkinsFix",

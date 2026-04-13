@@ -1,10 +1,6 @@
-using HG;
 using R2API;
 using RoR2;
 using RoR2.ContentManagement;
-using RoR2.ExpansionManagement;
-using RoR2.Networking;
-using RoR2BepInExPack.GameAssetPaths;
 using ShaderSwapper;
 using System;
 using System.Collections;
@@ -12,13 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.Networking;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.SceneManagement;
-using UnityEngine.XR;
-using static RoR2.Console;
-using static UnityEngine.UI.Image;
-
 namespace FSCStage.Content
 {
     public static class FSCContent
@@ -100,17 +89,16 @@ namespace FSCStage.Content
             // register Wetland Downpour
             if (FSCStage.regularEnabled.Value)
             {
-                if (FSCStage.loopVariant.Value)
+                if (FSCStage.loopVariant.Value && !FSCStage.replaceFoggyswamp.Value)
                 {
-                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, 0, false, true);  // Downpour replaces Wetland Aspect via script, so setting weight to 0 to not make Wetland variants more common
-                }
-                else if (FSCStage.replaceFoggyswamp.Value)
+                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, StageRegistration.defaultWeight, false, true);
+                } else if (FSCStage.replaceFoggyswamp.Value)
                 {
-                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, 0);
+                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, StageRegistration.defaultWeight);
                 }
                 else
                 {
-                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef);
+                    R2API.StageRegistration.RegisterSceneDefToNormalProgression(FSCSceneDef, StageRegistration.defaultWeight / 2);
                 }
             }
 
@@ -125,7 +113,28 @@ namespace FSCStage.Content
 
         }
 
-internal static void Unload()
+        //this was copied from Goorakh's WeightWrite mod!
+        public static void SetSceneWeight(RoR2.SceneDef scene, float weight, RoR2.SceneCollection _sceneCollection)
+        {
+            if (!scene)
+                return;
+
+            for (int i = 0; i < _sceneCollection._sceneEntries.Length; i++)
+            {
+                ref RoR2.SceneCollection.SceneEntry entry = ref _sceneCollection._sceneEntries[i];
+                if (entry.sceneDef == scene)
+                {
+                    Log.Debug($"Updating {scene} weight in {_sceneCollection}: {entry.weight}->{weight}");
+                    entry.weight = weight;
+                    //return;
+                }
+            }
+
+            Log.Warning($"Failed to find '{scene}' in {_sceneCollection}");
+        }
+
+
+        internal static void Unload()
         {
             _assetsAssetBundle.Unload(true);
             _scenesAssetBundle.Unload(true);

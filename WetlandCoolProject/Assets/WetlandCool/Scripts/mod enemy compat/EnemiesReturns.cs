@@ -1,6 +1,7 @@
 using EnemiesReturns;
 using EnemiesReturns.Configuration;
 using EnemiesReturns.Configuration.LynxTribe;
+using EnemiesReturns.Enemies.ArcherBug;
 using EnemiesReturns.Enemies.LynxTribe;
 using EnemiesReturns.Enemies.LynxTribe.Scout;
 using EnemiesReturns.Enemies.LynxTribe.Shaman;
@@ -82,6 +83,28 @@ namespace FSCStage
                 DirectorAPI.Helpers.AddNewMonsterToStage(shamanHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
                 DirectorAPI.Helpers.AddNewMonsterToStage(shamanHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
                 Log.Info("Lynx Shaman added to foggyswampdownpour's spawn pool.");
+
+            }
+
+            // Archer Bug
+            if (FSCStage.toggleArcherBugER.Value && General.EnableArcherBug.Value)
+            {
+                var bugCard = new RoR2.DirectorCard()
+                {
+                    spawnCard = (RoR2.SpawnCard)(object)ArcherBugBody.SpawnCards.cscArcherBugJungle,
+                    spawnDistance = RoR2.DirectorCore.MonsterSpawnDistance.Standard,
+                    selectionWeight = 1,
+                    minimumStageCompletions = 5
+                };
+
+                var bugHolder = new DirectorAPI.DirectorCardHolder
+                {
+                    Card = bugCard,
+                    MonsterCategory = DirectorAPI.MonsterCategory.BasicMonsters
+                };
+                DirectorAPI.Helpers.AddNewMonsterToStage(bugHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
+                DirectorAPI.Helpers.AddNewMonsterToStage(bugHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
+                Log.Info("Archer Bug (EnemiesReturns) added to foggyswampdownpour's spawn pool.");
 
             }
 

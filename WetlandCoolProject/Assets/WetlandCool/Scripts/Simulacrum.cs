@@ -17,45 +17,44 @@ namespace FSCStage.Content
         {
             SceneCollection fullCollection = Addressables.LoadAssetAsync<SceneCollection>("RoR2/DLC1/GameModes/InfiniteTowerRun/SceneGroups/sgInfiniteTowerStageX.asset").WaitForCompletion();
             SceneCollection stage1Collection = Addressables.LoadAssetAsync<SceneCollection>("RoR2/DLC1/GameModes/InfiniteTowerRun/SceneGroups/sgInfiniteTowerStage1.asset").WaitForCompletion();
-            List<SceneCollection> stageDestGroups = new List<SceneCollection>();
+            List<SceneCollection> stageSpecificCollections = new List<SceneCollection>();
 
-            // Using 'sgInfiniteTowerStageX' to collect each stage's scene collection 
             foreach (SceneCollection.SceneEntry sceneEntry in fullCollection.sceneEntries)
             {
+                if (sceneEntry.sceneDef == sceneDef)
+                {
+                    Log.Error($"SceneDef {sceneDef.cachedName} is already registered into the Simulacrum");
+                    return;
+                }
                 if (sceneEntry.sceneDef.hasAnyDestinations)
                 {
-                    stageDestGroups.Add(sceneEntry.sceneDef.destinationsGroup);
+                    stageSpecificCollections.Add(sceneEntry.sceneDef.destinationsGroup);
                 }
             }
 
-            // Create new destination group for the given stage
-            //var sceneDestinationGroup = new SceneCollection();
             SceneCollection sceneDestinationGroup = ScriptableObject.CreateInstance<SceneCollection>();
+            sceneDestinationGroup.name = "sgInfiniteTowerStageX" + sceneDef.cachedName;
             sceneDestinationGroup._sceneEntries = fullCollection._sceneEntries;
             sceneDef.destinationsGroup = sceneDestinationGroup;
 
-
-            // Create new SceneEntry for the given stage, then append to all collections
-
-            SceneCollection.SceneEntry value = new SceneCollection.SceneEntry
+            SceneCollection.SceneEntry newSceneEntry = new SceneCollection.SceneEntry
             {
                 sceneDef = sceneDef,
                 weightMinusOne = weight - 1f
             };
 
-            ref SceneCollection.SceneEntry[] fullEntries = ref fullCollection._sceneEntries;
-            ArrayUtils.ArrayAppend(ref fullEntries, in value);
+            ref SceneCollection.SceneEntry[] allSceneEntries = ref fullCollection._sceneEntries;
+            ArrayUtils.ArrayAppend(ref allSceneEntries, in newSceneEntry);
 
             if (canBeStage1)
             {
                 ref SceneCollection.SceneEntry[] stage1Entries = ref stage1Collection._sceneEntries;
-                ArrayUtils.ArrayAppend(ref stage1Entries, in value);
+                ArrayUtils.ArrayAppend(ref stage1Entries, in newSceneEntry);
             }
-
-            foreach (SceneCollection destGroup in stageDestGroups)
+            foreach (SceneCollection destinationGroup in stageSpecificCollections)
             {
-                ref SceneCollection.SceneEntry[] destGroupEntries = ref destGroup._sceneEntries;
-                ArrayUtils.ArrayAppend(ref destGroupEntries, in value);
+                ref SceneCollection.SceneEntry[] destGroupEntries = ref destinationGroup._sceneEntries;
+                ArrayUtils.ArrayAppend(ref destGroupEntries, in newSceneEntry);
             }
         }
     }

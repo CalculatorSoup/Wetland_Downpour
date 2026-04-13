@@ -1,3 +1,10 @@
+# 1.0.2
+- Added a config option to toggle EnemiesReturns' archer bugs (disabled by default)
+- Simplified the code used to register Wetland Downpour and replace Wetland Aspect at appropriate times. Should hopefully function exactly the same as before
+- If 'Post-Loop Variant' is set to false, Wetland Aspect and Wetland Downpour will now both have their weights set to half the normal value to prevent making Wetland variants more common than other stages
+- README: Fixed a typo in the Simulacrum preview image's link causing it to not load
+- Hallowed the map, Conceptual style
+
 # 1.0.1
 - Fixed the Simulacrum variant's scene def having "Should Include in Logbook" enabled (oops)
 - Fixed the Simulacrum variant's DLC1 ADCCS not having a target DCCS file (oops 2)

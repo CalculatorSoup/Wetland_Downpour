@@ -95,7 +95,7 @@ namespace FSCStage
                     };
                     DirectorAPI.Helpers.AddNewMonsterToStage(acidBugHolder, false, DirectorAPI.Stage.Custom, "foggyswampdownpour");
                     DirectorAPI.Helpers.AddNewMonsterToStage(acidBugHolder, false, DirectorAPI.Stage.Custom, "itfoggyswampdownpour");
-                    Log.Info("Archer Wasp added to foggyswampdownpour's spawn pool.");
+                    Log.Info("Archer Bug (Starstorm 2) added to foggyswampdownpour's spawn pool.");
 
                 }
             }
