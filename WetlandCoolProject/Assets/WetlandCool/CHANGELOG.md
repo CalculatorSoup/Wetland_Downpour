@@ -1,3 +1,9 @@
+# 1.0.3
+- Updated the water gravity script to fix a couple issues:
+  - Enemies that spawned underwater would sometimes not be affected by water gravity
+  - Enemies launched by Breaching Fin would float upward until they rose above the water
+- Fixed Lemurian Eggs not spawning if Artifact of Devotion is enabled
+
 # 1.0.2
 - Added a config option to toggle EnemiesReturns' archer bugs (disabled by default)
 - Simplified the code used to register Wetland Downpour and replace Wetland Aspect at appropriate times. Should hopefully function exactly the same as before

@@ -37,7 +37,7 @@ namespace FSCStage
 
         public const string Name = "WetlandDownpour";
 
-        public const string Version = "1.0.2";
+        public const string Version = "1.0.3";
 
         public const string GUID = Author + "." + Name;
 

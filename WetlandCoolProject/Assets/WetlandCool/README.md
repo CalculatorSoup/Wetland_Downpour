@@ -29,6 +29,7 @@ This mod also includes a Void replication of Wetland Downpour with partially-dec
 * **Config options**
   * Wetland Downpour: Enabled, Loop Variant, Replace Wetland Aspect (true/false)
   * Simulacrum Variant: Enabled, Enabled on Stage 1 (true/false)
+  * Underwater music muffling (true/false)
   * Modded enemy toggles
 * **Some monsters from other mods can appear if their respective mods are enabled**
   * [Starstorm 2](https://thunderstore.io/package/TeamMoonstorm/Starstorm2/): Follower, Wayfarer, Archer Bug

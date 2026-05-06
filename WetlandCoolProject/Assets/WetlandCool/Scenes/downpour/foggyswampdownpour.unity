@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 539968692}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.09820822, g: 0.1831379, b: 0.18933141, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -33479,7 +33479,7 @@ MonoBehaviour:
   monsterSpawnTargetOverride: {fileID: 0}
   lumerianEgg:
     spawnCardReference:
-      m_AssetGUID: 
+      m_AssetGUID: 234cc71a82b0e82468900be4c544c1c8
       m_SubObjectName: 
       m_SubObjectType: 
     spawnCard: {fileID: 0}

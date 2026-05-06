@@ -86,9 +86,9 @@ MonoBehaviour:
   - <ManifestPluginStaging>
   Author: wormsworms
   Name: Wetland_Downpour
-  Description: A new map that replaces Wetland Aspect after looping (configurable).
-    Now also includes a Simulacrum variant!
-  Version: 1.0.2
+  Description: A loop-exclusive variant for the Wetland Aspect map (configurable).
+    Also includes a Simulacrum variant!
+  Version: 1.0.3
   Dependencies:
   - {fileID: 11400000, guid: d7d8ed5ac59df8acbbc4983f1ebba079, type: 2}
   - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}
