@@ -1,3 +1,10 @@
+# 1.1.1
+- Added large roots atop the map's cliffs
+- Added ambient noise
+- Added a bunch of map node links around the map to allow enemies to jump down from platforms and cliffs
+- Fixed the geyser in the new cavernous area often not launching you far enough. I meant to fix this before uploading the previous update and then I forgot. :(
+- Fixed a ramp missing ground nodes
+
 # 1.1.0
 - Art pass:
   - Updated all terrain textures: grass is brighter, mud is blobbier, rock texture is darker
@@ -10,11 +17,11 @@
   - The small Lynx Totems in the map are now placed on foundation blocks with scaffolding to more closely resemble the statues/mini-totems in Tenebrous Quagmire
   - Added a new passageway inside a cliff near the middle of the map. Has a 50% chance to be blocked off each time you visit the stage
   - Added a new enterable cave in a corner of the map
-  - The huge pond at the "back" of the map is now much deeper and the floor is no longer unnaturally flat
+  - The huge pond near the back of the map is now much deeper and the floor is no longer unnaturally flat
   - Added a couple large dead logs to the large cliff/mound/whatever that can sometimes not appear
 - Other changes:
-  - Added Mini Mushrums
   - Either the geysers or the "cliff ring parkour" will always appear in the stage (previously it was possible for neither to appear)
+  - Added Mini Mushrums
   - Added compatibility with [SwampMiniboss](https://thunderstore.io/package/public_ParticleSystem/SwampMiniboss/)!
 
 # 1.0.3

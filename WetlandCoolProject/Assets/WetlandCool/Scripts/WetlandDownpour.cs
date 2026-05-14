@@ -37,7 +37,7 @@ namespace FSCStage
 
         public const string Name = "WetlandDownpour";
 
-        public const string Version = "1.1.0";
+        public const string Version = "1.1.1";
 
         public const string GUID = Author + "." + Name;
 
@@ -77,12 +77,12 @@ namespace FSCStage
 
             RoR2.Run.onRunStartGlobal += InitializeBazaarSeerValues;
 
-            RoR2.RoR2Application.onLoadFinished += AddModdedEnemies;
+            RoR2.RoR2Application.onLoad += OnLoad;
 
             SceneManager.sceneLoaded += SceneSetup;
         }
 
-        public static void AddModdedEnemies()
+        public static void OnLoad()
         {
             if (IsStarstorm2.enabled)
             {
@@ -102,7 +102,8 @@ namespace FSCStage
             // As far as I can tell, R2API / LoP / etc. don't really have any tools for easily / cleanly setting up a post-loop variant for a vanilla map.
             // If they do, please tell me so I can replace all of this.
 
-            // Despite being called AddModdedEnemies, this also handles setting up Wetland Aspect's weight depending on the config options selected.
+            // This code changes Wetland Aspect's weight depending on the config options selected. Downpour is registered and its weight is set in the WetlandDownpourContent script.
+
             SceneCollection sgStage2 = Addressables.LoadAssetAsync<SceneCollection>(RoR2BepInExPack.GameAssetPathsBetter.RoR2_Base_SceneGroups.sgStage2_asset).WaitForCompletion();
             SceneCollection loopSgStage2 = Addressables.LoadAssetAsync<SceneCollection>(RoR2BepInExPack.GameAssetPathsBetter.RoR2_Base_SceneGroups.loopSgStage2_asset).WaitForCompletion();
             RoR2.SceneDef foggyswamp = RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp");
@@ -132,7 +133,6 @@ namespace FSCStage
 
                     Log.Debug("Wetland Downpour registered (both Downpour and Aspect always in stage rotation. Weights for Aspect and Downpour halved)");
                 }
-
             }
 
         }
@@ -209,6 +209,24 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
                     GameObject didYouSeeItCommaCommaComma = GameObject.Find("HOLDER: Altar Skeleton/Skeleton").transform.GetChild(0).gameObject;
                     UnityEngine.Object.Destroy((UnityEngine.Object)(object)didYouSeeItCommaCommaComma.GetComponent<GameObjectUnlockableFilter>());
                     didYouSeeItCommaCommaComma.SetActive(true);
+                }
+            }
+
+            if (newScene.name == "foggyswampdownpour")
+            {
+                GameObject ambience = GameObject.Find("SceneInfo/Ambience");
+                AkBank bank = ambience.GetComponent<AkBank>();
+                AkAmbient[] ambientList = ambience.GetComponents<AkAmbient>();
+                AkAmbient ambient1 = ambientList[0];
+                AkAmbient ambient2 = ambientList[1];
+                if (bank)
+                {
+                    WwiseBankReference rainSound = Addressables.LoadAssetAsync<WwiseBankReference>("Wwise/CD00105A-AA3B-43F5-882A-C29812E886C8.asset").WaitForCompletion();
+                    WwiseEventReference startRain = Addressables.LoadAssetAsync<WwiseEventReference>("Wwise/7B5141F8-EB05-455E-92EF-46A479D8612C.asset").WaitForCompletion();
+                    WwiseEventReference stopSound = Addressables.LoadAssetAsync<WwiseEventReference>("Wwise/6F2ADD1C-BD55-431F-A62F-80CCD5F9631D.asset").WaitForCompletion();
+                    bank.data.WwiseObjectReference = rainSound;
+                    ambient1.data.WwiseObjectReference = startRain;
+                    ambient2.data.WwiseObjectReference = stopSound;
                 }
             }
 

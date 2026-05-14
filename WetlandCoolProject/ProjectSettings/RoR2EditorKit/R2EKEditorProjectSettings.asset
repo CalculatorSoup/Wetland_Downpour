@@ -22,7 +22,7 @@ MonoBehaviour:
       _settingID: -2021767324
       _valueTypeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      _serializedValue: Air - MoundDisabled
+      _serializedValue: Ground - Normal
       _defaultSerializedValue: 
     - _settingName: _offsetUpVector
       _settingID: 1577955846
@@ -54,7 +54,7 @@ MonoBehaviour:
       _settingID: -1148318642
       _valueTypeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      _serializedValue: MoundDisabled
+      _serializedValue: 
       _defaultSerializedValue: 
     _settingType: 0
     _settingProviderName: R2EKEditorProjectSettings

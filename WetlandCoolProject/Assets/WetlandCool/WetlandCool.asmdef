@@ -50,7 +50,10 @@
         "Starstorm2.dll",
         "EnemiesReturns.dll",
         "MSU.Runtime.dll",
-        "SwampMiniboss.dll"
+        "SwampMiniboss.dll",
+        "AK.Wwise.Unity.API.dll",
+        "AK.Wwise.Unity.MonoBehaviour.dll",
+        "AK.Wwise.Unity.API.WwiseTypes.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
