@@ -55,4 +55,4 @@ MonoBehaviour:
         _address: 
         _useDirectReference: 0
         _canLoadFromCatalog: 0
-    selectionWeight: 4
+    selectionWeight: 3

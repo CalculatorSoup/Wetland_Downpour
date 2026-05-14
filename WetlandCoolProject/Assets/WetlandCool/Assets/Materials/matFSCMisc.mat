@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: matFSCChettoMan
-  m_Shader: {fileID: 4800000, guid: d8173cf1cd83d654db32b2dfbbf71dd6, type: 3}
+  m_Name: matFSCMisc
+  m_Shader: {fileID: 4800000, guid: 892febee97f6cdf439912ad371711811, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - CUTOUT
@@ -30,14 +30,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cloud1Tex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cloud2Tex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -90,11 +82,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1ea8a6aca46a115408e3d8e395edcd53, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MaskTex:
-        m_Texture: {fileID: 2800000, guid: 1ea8a6aca46a115408e3d8e395edcd53, type: 3}
+        m_Texture: {fileID: 2800000, guid: 095d08798df803649b1ef0a8d26ef496, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -102,7 +90,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e926a2ee3f3ff66499cf9f554f984e1e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -117,10 +105,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _RemapTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SliceAlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -131,19 +115,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaBoost: 0.22
-    - _AngleLimit: 0.5
     - _BlueChannelBias: 0
     - _BlueChannelSmoothness: 0
     - _BumpScale: 1
-    - _CloudOn: 0
     - _ColorsOn: 0
-    - _Cull: 2
-    - _Cutoff: 0.134
-    - _DecalBlendMode: 0
-    - _DecalDstBlend: 10
+    - _Cull: 0
+    - _Cutoff: 0.5
     - _DecalLayer: 1
-    - _DecalSrcBlend: 5
     - _Depth: 0.2
     - _DetailNormalMapScale: 1
     - _DitherOn: 0
@@ -175,13 +153,8 @@ Material:
     - _GreenChannelSmoothness: 0
     - _LimbPrimeMask: 1
     - _LimbRemovalOn: 0
-    - _LimitTo: 0
-    - _MaskMultiplier: 1
-    - _MaskNormals: 0
     - _Metallic: 0
     - _Mode: 0
-    - _NormalBlendMode: 0
-    - _NormalMultiplier: 0.5
     - _NormalStrength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -197,20 +170,16 @@ Material:
     - _SliceHeight: 5
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
-    - _SpecularExponent: 2.04
+    - _SpecularExponent: 1
     - _SpecularHighlights: 1
     - _SpecularStrength: 0
     - _SplatmapOn: 0
     - _SplatmapTileScale: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UseAtlas: 0
     - _ZWrite: 1
     m_Colors:
-    - _AtlasCoord: {r: 0, g: 0, b: 0, a: 0}
-    - _AtlasSize: {r: 4, g: 4, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _CutoffScroll: {r: 0, g: 0, b: 0, a: 0}
     - _EmColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlashColor: {r: 0, g: 0, b: 0, a: 1}

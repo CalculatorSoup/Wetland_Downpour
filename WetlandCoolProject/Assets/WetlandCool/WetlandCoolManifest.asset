@@ -88,7 +88,7 @@ MonoBehaviour:
   Name: Wetland_Downpour
   Description: A loop-exclusive variant for the Wetland Aspect map (configurable).
     Also includes a Simulacrum variant!
-  Version: 1.0.3
+  Version: 1.1.0
   Dependencies:
   - {fileID: 11400000, guid: d7d8ed5ac59df8acbbc4983f1ebba079, type: 2}
   - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}
@@ -131,10 +131,10 @@ MonoBehaviour:
   StagingPaths:
   - <MSUBuildPath>
   assetBundles:
-  - assetBundleName: WetlandCoolAssets
+  - assetBundleName: wetlanddownpourassets
     assets:
     - {fileID: 102900000, guid: 6fccfddd5a17f8f4aa301a7372828d99, type: 3}
-  - assetBundleName: WetlandCoolScene
+  - assetBundleName: wetlanddownpourscenes
     assets:
     - {fileID: 102900000, guid: 80d47460b486bcb4886c90be52280a4c, type: 3}
     - {fileID: 102900000, guid: 78e288ed4e9ea9b458f5089e9e177c7c, type: 3}

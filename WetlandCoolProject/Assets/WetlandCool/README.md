@@ -11,7 +11,7 @@ This mod also includes a Void replication of Wetland Downpour with partially-dec
 ![](https://github.com/CalculatorSoup/Wetland_Downpour/blob/main/WetlandCoolProject/Assets/preview%20simulacrum.png?raw=true)
 
 ## Other Features
-* **Gameplay changes (compared to Wetland Aspect)**
+* **Gameplay changes (compared to Wetland Aspect):**
   * Updated enemy spawn pools (Added Alloy Vultures and Grovetenders. Added Larvae and Solus Amalgamator after looping. Removed Beetles and Beetle Queen)
   * Updated interactable pools (Drone scrappers can appear. Drone combiners can appear after looping)
   * Added ~6 new random variations
@@ -19,21 +19,22 @@ This mod also includes a Void replication of Wetland Downpour with partially-dec
   * Replaced/re-arranged all pillars, logs and other clutter throughout the map
   * Added a third body of water
   * The map is very slightly smaller overall
-* **Visual changes (compared to Wetland Aspect)**
+* **Visual changes (compared to Wetland Aspect):**
   * There are now several distinct areas scattered throughout the map: an abandoned survivor camp, a flooded altar, dormant Lynx Totems, etc.
   * Terrain textures are more saturated and the map is generally much more lush, with new mangrove trees, grass patches, and underwater foliage
   * The giant shallow "lake" is now deep enough to completely submerge all non-modded survivors
   * Water is clearer to make chests and other interactables more visible. Underwater post processing is a bit more noticeable
   * Ground terrain now has more height variation, mostly to make transitions between dry ground and water look more natural
   * The map is foggier and darker
-* **Config options**
+* **Config options:**
   * Wetland Downpour: Enabled, Loop Variant, Replace Wetland Aspect (true/false)
   * Simulacrum Variant: Enabled, Enabled on Stage 1 (true/false)
   * Underwater music muffling (true/false)
   * Modded enemy toggles
-* **Some monsters from other mods can appear if their respective mods are enabled**
-  * [Starstorm 2](https://thunderstore.io/package/TeamMoonstorm/Starstorm2/): Follower, Wayfarer, Archer Bug
-  * [EnemiesReturns](https://thunderstore.io/package/Risky_Sleeps/EnemiesReturns/): Lynx Totem, Lynx Scout, Spitter
+* **Mod compatibility:**
+  * [Starstorm 2](https://thunderstore.io/package/TeamMoonstorm/Starstorm2/): Followers, Wayfarers, and Archer Bugs can appear
+  * [EnemiesReturns](https://thunderstore.io/package/Risky_Sleeps/EnemiesReturns/): Lynx Totems, Lynx Scouts, and Spitters can appear
+  * [SwampMiniboss](https://thunderstore.io/package/public_ParticleSystem/SwampMiniboss/): Also works on Wetland Downpour and its Simulacrum variant
 ## Bugs / Issues
 
 This is my first mod I've released for Risk of Rain 2 (and just generally the first mod I've ever completed and released for anything), so it's kind of a miracle that this works at all. I haven't tested it much outside of repeatedly playing it in singleplayer and multiplayer runs with/without ~100 other mods installed.

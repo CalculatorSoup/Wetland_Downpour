@@ -1,3 +1,22 @@
+# 1.1.0
+- Art pass:
+  - Updated all terrain textures: grass is brighter, mud is blobbier, rock texture is darker
+  - Replaced the bazaar lights with fire bowls on wooden stands, like the ones seen in some Hallowed Concepts maps
+  - Tree leaves now have a dark crimson hue (previously just reused the bright pink leaves from Golden Dieback)
+  - Changed fog for probably like the sixth time: near fog is less saturated, far fog is more saturated, fog is much greener
+  - The sky now has a darker, magenta-ish hue (previously was light brown)
+  - Added low fog and clouds to the skybox
+- Layout changes:
+  - The small Lynx Totems in the map are now placed on foundation blocks with scaffolding to more closely resemble the statues/mini-totems in Tenebrous Quagmire
+  - Added a new passageway inside a cliff near the middle of the map. Has a 50% chance to be blocked off each time you visit the stage
+  - Added a new enterable cave in a corner of the map
+  - The huge pond at the "back" of the map is now much deeper and the floor is no longer unnaturally flat
+  - Added a couple large dead logs to the large cliff/mound/whatever that can sometimes not appear
+- Other changes:
+  - Added Mini Mushrums
+  - Either the geysers or the "cliff ring parkour" will always appear in the stage (previously it was possible for neither to appear)
+  - Added compatibility with [SwampMiniboss](https://thunderstore.io/package/public_ParticleSystem/SwampMiniboss/)!
+
 # 1.0.3
 - Updated the water gravity script to fix a couple issues:
   - Enemies that spawned underwater would sometimes not be affected by water gravity
@@ -80,6 +99,3 @@
 
 # 0.1.0
 - Initial Release
-
-
-

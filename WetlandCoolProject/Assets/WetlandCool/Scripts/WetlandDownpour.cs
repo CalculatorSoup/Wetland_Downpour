@@ -37,7 +37,7 @@ namespace FSCStage
 
         public const string Name = "WetlandDownpour";
 
-        public const string Version = "1.0.3";
+        public const string Version = "1.1.0";
 
         public const string GUID = Author + "." + Name;
 
@@ -92,6 +92,11 @@ namespace FSCStage
             if (IsEnemiesReturns.enabled)
             {
                 EnemiesReturnsCompat.AddEnemies(); //Lynx Totem, Lynx Scout, Spitter
+            }
+
+            if (IsSwampMiniboss.enabled)
+            {
+                SwampMinibossCompat.GetFoggySwampSpawnPoint();
             }
 
             // As far as I can tell, R2API / LoP / etc. don't really have any tools for easily / cleanly setting up a post-loop variant for a vanilla map.
@@ -191,6 +196,19 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
                     RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswamp").filterOutOfBazaar = true;
                     RoR2.SceneCatalog.GetSceneDefFromSceneName("foggyswampdownpour").filterOutOfBazaar = false;
                     Log.Debug("Bazaar filter values for foggyswamp and foggyswampdownpour swapped");
+                }
+            }
+
+            //SwampMiniboss compatibility stuff. Set spawn point depending on scene name, and unhide the altar skeleton if the new scene is Downpour
+            if (IsSwampMiniboss.enabled)
+            {
+                SwampMinibossCompat.SetSpawnPointValue(newScene.name);
+
+                if (newScene.name == "foggyswampdownpour" || newScene.name == "itfoggyswampdownpour")
+                {
+                    GameObject didYouSeeItCommaCommaComma = GameObject.Find("HOLDER: Altar Skeleton/Skeleton").transform.GetChild(0).gameObject;
+                    UnityEngine.Object.Destroy((UnityEngine.Object)(object)didYouSeeItCommaCommaComma.GetComponent<GameObjectUnlockableFilter>());
+                    didYouSeeItCommaCommaComma.SetActive(true);
                 }
             }
 

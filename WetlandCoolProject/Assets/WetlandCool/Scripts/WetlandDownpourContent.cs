@@ -13,8 +13,8 @@ namespace FSCStage.Content
     public static class FSCContent
     {
 
-        internal const string ScenesAssetBundleFileName = "WetlandCoolScene";
-        internal const string AssetsAssetBundleFileName = "WetlandCoolAssets";
+        internal const string ScenesAssetBundleFileName = "wetlanddownpourscenes";
+        internal const string AssetsAssetBundleFileName = "wetlanddownpourassets";
 
         private static AssetBundle _scenesAssetBundle;
         private static AssetBundle _assetsAssetBundle;

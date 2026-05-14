@@ -199,7 +199,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f6bb7fef22917dfc76a1d879873d924028ab0afe"
+      "hash": "ae09ddcf060e5a8424dbd557acef805fbb150f38"
     },
     "kingenderbrine-lobbyskinsfix": {
       "version": "file:LobbySkinsFix",
@@ -257,6 +257,12 @@
     },
     "pseudopulse-soundfixer": {
       "version": "file:SoundFixer",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "public_particlesystem-swampminiboss": {
+      "version": "file:SwampMiniboss",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

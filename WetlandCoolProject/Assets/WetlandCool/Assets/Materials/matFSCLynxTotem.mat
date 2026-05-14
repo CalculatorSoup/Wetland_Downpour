@@ -59,8 +59,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTex:
-        m_Texture: {fileID: 2800000, guid: e12cdd45603cc5f449a1be378795b7bd, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Texture: {fileID: 2800000, guid: 5d85f1285ce6cda49b254314e197207b, type: 3}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
@@ -75,15 +75,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SnowTex:
-        m_Texture: {fileID: 2800000, guid: e8410ca5a19167c49a74ab074db882a9, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Texture: {fileID: 2800000, guid: 13f06511b3bc3d04d803842eacdaea57, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BinaryBlendOn: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Depth: 1
+    - _Depth: 0.689
     - _DetailNormalMapScale: 1
     - _DirtBias: 0
     - _DirtOn: 0
@@ -107,7 +107,7 @@ Material:
     - _RampInfo: 1
     - _Smoothness: 0.3
     - _SmoothnessTextureChannel: 0
-    - _SnowBias: -0.3
+    - _SnowBias: -0.26
     - _SnowOn: 0
     - _SnowSmoothness: 0
     - _SnowSpecularExponent: 0
