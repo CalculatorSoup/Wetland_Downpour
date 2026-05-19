@@ -1,3 +1,15 @@
+# 1.1.2
+- Added the roaches from Wetland Aspect
+  - This is the last thing I wanted to include before considering this map "feature complete", but I will probably continue finding millions of tiny things to fix and tweak until I die
+- Geysers are now always active. The "ring parkour" leading to a bonus newt altar has been removed. That newt altar is now just one of the random ones you can get
+  - I did not notice until doing this update, but the map nodes atop the cliff straight up just never worked, I think. They only started working after I removed the gate name from the nodes, so this change was made by necessity. Kinda sucks, but it's whatever
+- Adjusted lighting a bit: Sunlight is less intense and has a more neutral color, ambient lighting is tinted red to match the sky (was blue/green previously). Should look basically identical. I could have omitted this patch note and no one would have known that I did it
+- Replaced the blue bazaar planks with unique planks that match the ones added to the Lynx Totem bases in 1.1.0
+- Added planks to the tree above the round "altar" in the giant pond when the log leaning on the altar gate frame becomes active
+- Made the mangrove trees a bit wet and slimy to match the roots
+- Added more roots
+- Very slightly adjusted the water material. Outer foam is a bit thinner and water fades more at the edges
+
 # 1.1.1
 - Added large roots atop the map's cliffs
 - Added ambient noise

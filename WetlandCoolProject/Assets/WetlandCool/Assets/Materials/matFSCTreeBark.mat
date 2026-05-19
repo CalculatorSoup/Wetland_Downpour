@@ -107,12 +107,12 @@ Material:
     - _IgnoreBiasOn: 0
     - _Metallic: 0
     - _Mode: 0
-    - _NormalStrength: 0.3
+    - _NormalStrength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RampInfo: 1
     - _Scale: 1
-    - _Smoothness: 0
+    - _Smoothness: 0.35
     - _SmoothnessTextureChannel: 0
     - _SnowBias: 0.1
     - _SnowOn: 0

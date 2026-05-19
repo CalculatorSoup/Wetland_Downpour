@@ -228,6 +228,7 @@ public void ReplaceWetlandAspect(On.RoR2.Run.orig_PickNextStageScene orig, RoR2.
                     ambient1.data.WwiseObjectReference = startRain;
                     ambient2.data.WwiseObjectReference = stopSound;
                 }
+
             }
 
             if (newScene.name == "itfoggyswampdownpour")

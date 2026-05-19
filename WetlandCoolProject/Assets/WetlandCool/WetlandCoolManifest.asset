@@ -87,8 +87,8 @@ MonoBehaviour:
   Author: wormsworms
   Name: Wetland_Downpour
   Description: A loop-exclusive variant for the Wetland Aspect map (configurable).
-    Also includes a Simulacrum variant!
-  Version: 1.1.1
+    Also includes roach
+  Version: 1.1.2
   Dependencies:
   - {fileID: 11400000, guid: d7d8ed5ac59df8acbbc4983f1ebba079, type: 2}
   - {fileID: 11400000, guid: 98480314448d120c05e373472456e52b, type: 2}

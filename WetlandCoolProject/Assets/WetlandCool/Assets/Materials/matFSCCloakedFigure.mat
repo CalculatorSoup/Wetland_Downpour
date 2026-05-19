@@ -112,7 +112,7 @@ Material:
     - _Parallax: 0.02
     - _RampInfo: 3
     - _Scale: 1
-    - _Smoothness: 0.6
+    - _Smoothness: 0.35
     - _SmoothnessTextureChannel: 0
     - _SnowBias: 0.2
     - _SnowOn: 0
